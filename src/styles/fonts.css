@@ -1,0 +1,137 @@
+/*--------------Fonts--------------*/
+
+@font-face {
+    font-family: Roboto;
+    src: url(./fonts/roboto-300.woff) format('woff');
+    	font-style: normal;
+        font-weight: 300;
+}
+@font-face {
+    font-family: Roboto;
+    src: url(./fonts/roboto-400.woff) format('woff');
+    	font-style: normal;
+        font-weight: 400;
+}
+@font-face {
+    font-family: Roboto;
+    src: url(./fonts/roboto-500.woff) format('woff');
+    	font-style: normal;
+        font-weight: 500;
+}
+@font-face {
+    font-family: Roboto;
+    src: url(./fonts/roboto-700.woff) format('woff');
+    	font-style: normal;
+        font-weight: 700;
+}
+@font-face {
+    font-family: Roboto;
+    src: url(./fonts/roboto-900.woff) format('woff');
+    	font-style: normal;
+        font-weight: 900;
+}
+@font-face {
+    font-family: FuturaPT;
+    src: url(./fonts/FuturaPT-200.woff) format('woff');
+    	font-style: normal;
+        font-weight: 200;
+}
+@font-face {
+    font-family: FuturaPT;
+    src: url(./fonts/FuturaPT-400.woff) format('woff');
+    	font-style: normal;
+        font-weight: 400;
+}
+@font-face {
+    font-family: FuturaPT;
+    src: url(./fonts/FuturaPT-700.woff) format('woff');
+    	font-style: normal;
+        font-weight: 700;
+}
+@font-face {
+    font-family: 'Open Sans Condensed';
+    src: url(./fonts/OpenSans-CondLight.woff) format('woff');
+        font-style: normal;
+        font-weight: 400;
+}
+@font-face {
+    font-family: 'Open Sans Condensed';
+    src: url(./fonts/OpenSans-CondBold.woff) format('woff');
+        font-style: normal;
+        font-weight: 700;
+}
+@font-face {
+    font-family: 'league-gothic';
+    src: url(./fonts/leaguegothic-regular-webfont.woff) format('woff');
+        font-style: normal;
+        font-weight: 400;
+}
+
+@font-face {
+    font-family: 'league-gothic';
+    src: url(./fonts/leaguegothic-regular-webfont.woff) format('woff');
+        font-style: normal;
+        font-weight: 400;
+}
+@font-face {
+    font-family: FuturaBT;
+    src: url(./fonts/FuturaExtraBlack.ttf) format('truetype');
+        font-style: normal;
+        font-weight: 900;
+}
+@font-face {
+    font-family: FuturaBT;
+    src: url(./fonts/FuturaHeavy.ttf) format('truetype');
+        font-style: normal;
+        font-weight: 800;
+}
+@font-face {
+    font-family: FuturaBT;
+    src: url(./fonts/FuturaBold.ttf) format('truetype');
+        font-style: normal;
+        font-weight: 700;
+}
+@font-face {
+    font-family: FuturaBT;
+    src: url(./fonts/FuturaBoldItalic.ttf) format('truetype');
+        font-style: italic;
+        font-weight: 700;
+}
+@font-face {
+    font-family: FuturaBT;
+    src: url(./fonts/futuraMediumBt.ttf) format('truetype');
+        font-style: normal;
+        font-weight: 500;
+}
+@font-face {
+    font-family: FuturaCBT;
+    src: url(./fonts/Futura-CondensedLight.otf) format('truetype');
+        font-style: normal;
+        font-weight: 300;
+}
+@font-face {
+    font-family: FuturaCBT;
+    src: url(./fonts/futuramediumcondensedbt.ttf) format('truetype');
+        font-style: normal;
+        font-weight: 400;
+}
+
+@font-face {
+    font-family: FuturaBT;
+    src: url(./fonts/futuralightbt.ttf) format('truetype');
+        font-style: normal;
+        font-weight: 300;
+}
+@font-face {
+    font-family: FuturaBook;
+    src: url(./fonts/FuturaBook.ttf) format('truetype');
+        font-style: normal;
+        font-weight: 400;
+}
+
+@font-face {
+    font-family: FuturaBT;
+    src: url(./fonts/FuturaLight.ttf) format('truetype');
+        font-style: normal;
+        font-weight: 200;
+}

@@ -1,0 +1,75 @@
+/*-------------------typography---------------------*/
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+div,
+input,
+textarea,
+a,
+li,
+button {
+  font-family: FuturaBT, Roboto, sans-serif;
+}
+h1 {
+  font-weight: 700;
+  font-size: 30px;
+  margin: 10px 0 25px;
+}
+h2 {
+  font-family: FuturaCBT;
+  font-weight: 400;
+  font-size: calc(2rem - 7px);
+}
+
+/*---------------------Utilities---------------------*/
+.w-80 {
+  width: 80%;
+}
+.w-60 {
+  width: 60% !important;
+}
+.w-30 {
+  width: 30% !important;
+}
+.hide {
+  display: none !important;
+}
+.bg-yellow,
+.bg-yellow-outline:hover {
+  background-color: #f4c811;
+}
+.text-yellow,
+.textYellow {
+  color: #f4c811;
+}
+
+.br-25 {
+  border-radius: 25px;
+}
+.bg_lightgray {
+  background: #e6e6e6;
+}
+.bg_gray {
+  background-color: #808080;
+}
+.text_gray,
+.text_gray a,
+a.text_gray:hover {
+  color: #808080;
+}
+.color-orangered {
+  color: #e75d00;
+}
+.color-darkslategray {
+  color: #444751;
+}
+.color-white {
+  color: #fff;
+}
