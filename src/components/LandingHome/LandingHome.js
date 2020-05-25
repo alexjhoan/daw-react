@@ -1,8 +1,8 @@
 import React from "react"
 import {Container, Row, Col} from "react-bootstrap"
-import CarrouselMultiItems from "../Carousels/Carousel"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
+import Carousel from '../Carousels/Carousel'
 import "./style.css"
 
 export default function LandingHome() {
@@ -22,13 +22,7 @@ export default function LandingHome() {
           </Col>
         </Row>
       </Container>
-      <Container fluid className="section-carousel">
-        <Row>
-          <Col>
-            <CarrouselMultiItems />
-          </Col>
-        </Row>
-      </Container>
+      <Carousel />
     </React.Fragment>
   )
 }
