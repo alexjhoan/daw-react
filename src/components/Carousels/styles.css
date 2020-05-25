@@ -67,8 +67,18 @@
 
 /*------------------items-carousels-----------------------*/
 
+.section-carousel {
+  background-color: #fff;
+  transition: all 0.5s ease;
+  padding-bottom: 80px!important;
+  padding-top: 60px!important;
+  box-shadow: 0px -10px 15px rgba(0,0,0,.2);
+}
+
 .item-slider {
   position: relative;
+  overflow: hidden;
+  border: solid 15px #fff;
 }
 a.img_carousel {
   position: absolute;
@@ -111,7 +121,7 @@ a.img_carousel:hover ~ .bg_img_carousel {
 }
 .item-slider h4 {
   color: #fff;
-  font-size: 1.2rem;
+  font-size: 32px;
   text-transform: uppercase;
   font-weight: 600;
   margin-bottom: 0;
@@ -164,4 +174,21 @@ a:hover ~ .infoCollection p:last-of-type {
 .item-slider span.icons-like a.shared {
   margin-right: 15px;
   transform: translateY(-3px);
+}
+
+.slick-arrow:before {
+    content: none;
+}
+
+.slick-arrow {
+  display: block;
+  color: #fff;
+  font-size: 50px;
+  z-index: 3;
+  top: 47%;
+}
+
+.slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus {
+    color: #fff;
+    outline: none;
 }

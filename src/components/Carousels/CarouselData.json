@@ -1,0 +1,25 @@
+{
+  "itemsCarousel":[
+    {
+      "titleCarousel":"Islandia",
+      "urlPublication":"#",
+      "urlImage":"../../styles/images/collection/collection1.jpg",
+      "urlShared":"#",
+      "urlBookMark":"#"
+    },
+    {
+      "titleCarousel":"Grecia",
+      "urlPublication":"#",
+      "urlImage":"../../styles/images/collection/collection2.jpg",
+      "urlShared":"#",
+      "urlBookMark":"#"
+    },
+    {
+      "titleCarousel":"Otra Islandia",
+      "urlPublication":"#",
+      "urlImage":"../../styles/images/collection/collection3.jpg",
+      "urlShared":"#",
+      "urlBookMark":"#"
+    }
+  ]
+}

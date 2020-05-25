@@ -4,25 +4,46 @@ import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
-import {faAngleRight, faBookmark} from "@fortawesome/free-solid-svg-icons"
-import ItemCarouselBg from "../../styles/images/collection/collection2.jpg"
-import SharedWhite from "../../styles/images/icons/i_shared_white.svg"
+import {faAngleRight, faAngleLeft} from "@fortawesome/free-solid-svg-icons"
+import ItemsCarousel from './ItemsCarousel'
 import "./styles.css"
+
+function NextArrow(props) {
+  const {className, style, onClick} = props
+  return (
+    <div className={className} style={{...style, right: "25"+"px"}} onClick={onClick}>
+      <FontAwesomeIcon icon={faAngleRight} />
+    </div>
+  )
+}
+
+function PrevArrow(props) {
+  const {className, style, onClick} = props
+  return (
+    <div className={className} style={{...style,left: "25"+"px"}} onClick={onClick}>
+      <FontAwesomeIcon icon={faAngleLeft} />
+    </div>
+  )
+}
 
 export class Carousel extends React.Component {
   clickFalse = (e) => {
     e.preventDefault()
   }
 
-
   render() {
-  const settings = {
-    dots: true,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 2,
-    slidesToScroll: 1
-  }
+    const settings = {
+      dots: false,
+      infinite: false,
+      speed: 500,
+      infinite: true,
+      lazyLoad: true,
+      swipeToSlide: true,
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      nextArrow: <NextArrow />,
+      prevArrow: <PrevArrow />
+    }
     return (
       <Container fluid className="section-carousel p-0">
         <Row className="m-0">
@@ -41,27 +62,13 @@ export class Carousel extends React.Component {
             </div>
           </Col>
         </Row>
-        <Row>
-          <Col className="px-5 mb-5">
-
-              <div className="item-slider">
-                <a className="img_carousel" href="#" onClick={this.clickFalse}></a>
-                <div className="bg_img_carousel" style={{backgroundImage: 'url(' + ItemCarouselBg + ')'}}></div>
-                <div className="infoCollection">
-                  <p>Colección</p>
-                  <h4><span className="textYellow">#</span>Islandia</h4>
-                  <p>85 elementos</p>
-                </div>
-                <span className="icons-like">
-                  <a href="#" className="shared">
-                    <img src={SharedWhite} alt="share" />
-                  </a>
-                  <a href="#">
-                    <FontAwesomeIcon icon={faBookmark} />
-                  </a>
-                </span>
-              </div>
-
+        <Row className="m-0">
+          <Col className="px-5">
+            <Slider {...settings}>
+              <ItemsCarousel />
+              <ItemsCarousel />
+              <ItemsCarousel />
+            </Slider>
           </Col>
         </Row>
       </Container>
