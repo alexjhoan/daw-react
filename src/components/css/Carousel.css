@@ -78,6 +78,7 @@
   position: relative;
   overflow: hidden;
   border: solid 15px #fff;
+  width: 100%;
 }
 a.img_carousel {
   position: absolute;
@@ -173,21 +174,4 @@ a:hover ~ .infoCollection p:last-of-type {
 .item-slider span.icons-like a.shared {
   margin-right: 15px;
   transform: translateY(-3px);
-}
-
-.slick-arrow:before {
-    content: none;
-}
-
-.slick-arrow {
-  display: block;
-  color: #fff;
-  font-size: 50px;
-  z-index: 3;
-  top: 47%;
-}
-
-.slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus {
-    color: #fff;
-    outline: none;
 }

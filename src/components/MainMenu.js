@@ -1,5 +1,5 @@
 import React from "react"
-import {Container, Row, Col, Form, Image, Nav, NavDropdown, Navbar, Figure} from "react-bootstrap"
+import {Container, Row, Col, Form, Image, Nav, Navbar, Figure} from "react-bootstrap"
 import Headroom from "react-headroom"
 import logo from "../assets/images/logo.svg"
 import search from "../assets/images/icons/i_search.svg"
