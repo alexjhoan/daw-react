@@ -1,0 +1,32 @@
+{
+  "Magazines":[
+    {
+      "titleCarousel":"Islandia",
+      "urlPublication":"#",
+      "urlImage":"http://lorempixel.com/600/350/city",
+      "urlShared":"#",
+      "urlBookMark":"#"
+    },
+    {
+      "titleCarousel":"Grecia",
+      "urlPublication":"#",
+      "urlImage":"http://lorempixel.com/600/350/food",
+      "urlShared":"#",
+      "urlBookMark":"#"
+    },
+    {
+      "titleCarousel":"China",
+      "urlPublication":"#",
+      "urlImage":"http://lorempixel.com/600/350/sports",
+      "urlShared":"#",
+      "urlBookMark":"#"
+    },
+    {
+      "titleCarousel":"España",
+      "urlPublication":"#",
+      "urlImage":"http://lorempixel.com/600/350/business",
+      "urlShared":"#",
+      "urlBookMark":"#"
+    }
+  ]
+}

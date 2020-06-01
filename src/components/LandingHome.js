@@ -2,8 +2,8 @@ import React from "react"
 import {Container, Row, Col} from "react-bootstrap"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
-import Carousel from '../Carousels/Carousel'
-import "./style.css"
+import Carousel from './Carousels/Carousel'
+import "./css/LandingHome.css"
 
 export default function LandingHome() {
   return (
@@ -22,7 +22,8 @@ export default function LandingHome() {
           </Col>
         </Row>
       </Container>
-      <Carousel />
+      <Carousel titleCarousel="Magazines" urlSeeAll="#" slidesToShow={2}/>
+      <Carousel titleCarousel="Colecciones" urlSeeAll="#" slidesToShow={2}/>
     </React.Fragment>
   )
 }
