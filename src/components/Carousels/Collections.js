@@ -7,18 +7,17 @@ import SharedWhite from "../../assets/images/icons/i_shared_white.svg"
 import ItemCarouselBg from '../../assets/images/collection/collection2.jpg'
 import {DataMagazine} from "./Magazines.json"
 
-export default function Magazines(props:any) {
+export default function Collections(props:any) {
 
-  const dataMagazines = Object.values(DataMagazine)
-  const dataMagazinesImp = dataMagazines.map((a, i) => {
-
+  const dataCollections = Object.values(DataMagazine)
+  const dataCollectionsImp = dataCollections.map((a, i) => {
     return (
       <Slide index={i} key={i}>
         <div className="item-slider">
           <a className="img_carousel" href="#"></a>
           <div className="bg_img_carousel" style={{backgroundImage: "url(" + ItemCarouselBg + ")"}}></div>
           <div className="infoCollection">
-            <p>Magazines</p>
+            <p>Collections</p>
             <h4>
               <span className="textYellow">#</span>{a.titleCarousel}
             </h4>
@@ -46,7 +45,7 @@ export default function Magazines(props:any) {
       totalSlides={DataMagazine.length}
       >
       <Slider>
-        {dataMagazinesImp}
+        {dataCollectionsImp}
       </Slider>
       <ButtonBack>Back</ButtonBack>
       <ButtonNext>Next</ButtonNext>

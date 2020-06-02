@@ -2,7 +2,6 @@ import React from "react"
 import {Container, Row, Col} from "react-bootstrap"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import {faAngleRight, faAngleLeft} from "@fortawesome/free-solid-svg-icons"
-import MainCarousel from './MainCarousel'
 import "../css/Carousel.css"
 
 export default function Carousels(props: any) {
