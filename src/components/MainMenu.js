@@ -1,6 +1,14 @@
-import React from "react"
-import {Container, Row, Col, Form, Image, Nav, Navbar, Figure} from "react-bootstrap"
+import React, { useState } from "react"
+import clsx from 'clsx';
 import Headroom from "react-headroom"
+import {AppBar, Toolbar, IconButton, Typography, InputBase, Drawer, List, Divider, ListItem, ListItemIcon, ListItemText} from '@material-ui/core';
+import { createStyles, fade, Theme, makeStyles } from '@material-ui/core/styles';
+import MenuIcon from '@material-ui/icons/Menu';
+import SearchIcon from '@material-ui/icons/Search';
+import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
+import InboxIcon from '@material-ui/icons/MoveToInbox';
+import MailIcon from '@material-ui/icons/Mail';
 import logo from "../assets/images/logo.svg"
 import search from "../assets/images/icons/i_search.svg"
 import user from "../assets/images/icons/i_user.svg"
@@ -11,95 +19,145 @@ import frequentQuestions from "../assets/images/icons/i_frequent_questions.svg"
 import privacy from "../assets/images/icons/i_privacy.svg"
 import inviteFriends from "../assets/images/icons/i_invite_friends.svg"
 import feedback from "../assets/images/icons/i_feedback.svg"
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
-import {faAngleRight} from "@fortawesome/free-solid-svg-icons"
 import "./css/MainMenu.css"
 
+
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    barRoot:{
+      backgroundColor: fade(theme.palette.common.white, 0.7),
+    },
+    root: {
+      flexGrow: 1,
+    },
+
+    menuButton: {
+      marginRight: theme.spacing(2),
+    },
+    search: {
+      position: 'relative',
+      borderRadius: theme.shape.borderRadius,
+      backgroundColor: fade(theme.palette.common.white, 0),
+      '&:focus': {
+        backgroundColor: fade(theme.palette.common.white, 0.25),
+      },
+      marginLeft: 0,
+      width: '100%',
+      [theme.breakpoints.up('sm')]: {
+        marginLeft: theme.spacing(1),
+        width: 'auto',
+      },
+    },
+    searchIcon: {
+      padding: theme.spacing(0, 1.5),
+      height: '100%',
+      position: 'absolute',
+      pointerEvents: 'none',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      zIndex: 5,
+      right: 0,
+
+    },
+    inputRoot: {
+      color: 'inherit',
+    },
+    inputInput: {
+      padding: theme.spacing(1, 1, 1, 0),
+      // vertical padding + font size from searchIcon
+      paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
+      transition: theme.transitions.create('width'),
+      width: '100%',
+      [theme.breakpoints.up('xs')]: {
+        width: '0ch',
+        '&:focus': {
+          width: '20ch',
+          backgroundColor: fade(theme.palette.common.white, 1),
+          borderRadius: '25em',
+        },
+      },
+    },
+    list: {
+      width: 250,
+    },
+    fullList: {
+      width: 'auto',
+    },
+  }),
+);
+
 export default function MainMenu() {
+  const classes = useStyles();
+
+  const [state, setState] = React.useState({
+    drawerIsOpen: false,
+  });
+
+  const handleDrawerOpen = () => {
+    setState({ drawerIsOpen: true });
+  };
+
+  const handleDrawerClose = () => {
+    setState({ drawerIsOpen: false });
+  };
+
   return (
+    <React.Fragment>
     <Headroom>
-      <header className="head-menu">
-        <Container fluid className="p-0 sticky-top-menu menu-top">
-          <Row className="m-0">
-            <Col xs={12} md={12} className="px-md-0">
-              <Navbar expand={false} variant="light" bg="light" className="navbar-custom">
-                <div className="left-menu">
-                  <Navbar.Brand href="#">
-                    <div className="logo-text-lightbox d-flex justify-content-center align-items-center">
-                      <Image src={logo} fluid />
-                      <p>
-                        DREAM<span className="textYellow">AWAY</span>
-                        <br />
-                        <span>TRAVEL</span>
-                      </p>
-                    </div>
-                  </Navbar.Brand>
+      <div className={classes.root}>
+        <AppBar position="static" className={classes.barRoot}>
+          <Toolbar>
+            <div className="logo-text d-flex justify-content-center align-items-center">
+              <img src={logo} className="img-fluid" />
+              <Typography variant="body1" noWrap>
+                DREAM<span className="textYellow">AWAY</span>
+                <br />
+                <span>TRAVEL</span>
+              </Typography>
+            </div>
+            <div className="right-menu">
+              <div className={classes.search}>
+                <div className={classes.searchIcon}>
+                  <SearchIcon />
                 </div>
-                <div className="right-menu right-menu-user-authenticated">
-                  <Form className="search">
-                    <Form.Control type="seacrh" placeholder="Buscar" />
-                    <Image className="img-search" src={search} alt="search" />
-                  </Form>
-                  <Nav.Link href="#" className="nav-profile" style={{backgroundImage: "url(" + user + ")"}}></Nav.Link>
-                  <Navbar.Toggle aria-controls="navCollapse-profile" className="border-0" />
-                  <Navbar.Collapse id="navCollapse-profile">
-                    <Nav className="mr-auto">
-                      <Navbar.Toggle aria-controls="navCollapse-profile" className="border-0" />
-                      <div className="top_profile d-flex flex-column align-items-center justify-content-center">
-                        <Figure className="mb-3">
-                          <Figure.Image width={30} height={33.5} alt="user" className="mb-0" src={userLight} />
-                        </Figure>
-                        <Nav.Link href="#" className="btn bg-yellow mb-2">
-                          Acceder
-                          <FontAwesomeIcon icon={faAngleRight} />
-                        </Nav.Link>
-                      </div>
-                      <div className="linksMenu">
-                        <Nav.Link href="#manifiesto">
-                          <Figure>
-                            <Figure.Image width={18} alt="manifest" src={manifest} />
-                          </Figure>
-                          Manifiesto
-                        </Nav.Link>
-                        <Nav.Link href="#pricing">
-                          <Figure>
-                            <Figure.Image width={18} alt="rules" src={rules} />
-                          </Figure>
-                          Reglas generales
-                        </Nav.Link>
-                        <Nav.Link href="#pricing">
-                          <Figure>
-                            <Figure.Image width={18} alt="frequentQuestions" src={frequentQuestions} />
-                          </Figure>
-                          Preguntas Frecuentes
-                        </Nav.Link>
-                        <Nav.Link href="#pricing">
-                          <Figure>
-                            <Figure.Image width={18} alt="privacy" src={privacy} />
-                          </Figure>
-                          Políticas de privacidad <br />y uso de datos
-                        </Nav.Link>
-                        <Nav.Link href="#pricing">
-                          <Figure>
-                            <Figure.Image width={18} alt="inviteFriends" src={inviteFriends} />
-                          </Figure>
-                          Invitar a amigos
-                        </Nav.Link>
-                        <Nav.Link href="#pricing">
-                          <Figure>
-                            <Figure.Image width={18} alt="feedback" src={feedback} />
-                          </Figure>
-                          Feedback
-                        </Nav.Link>
-                      </div>
-                    </Nav>
-                  </Navbar.Collapse>
-                </div>
-              </Navbar>
-            </Col>
-          </Row>
-        </Container>
-      </header>
+                <InputBase
+                  placeholder="Buscar…"
+                  classes={{
+                    root: classes.inputRoot,
+                    input: classes.inputInput,
+                  }}
+                  inputProps={{ 'aria-label': 'search' }}
+                />
+              </div>
+              <a href="#" className="nav-profile" style={{backgroundImage: "url(" + user + ")"}}></a>
+              <IconButton
+                edge="start"
+                className={classes.menuButton}
+                color="inherit"
+                aria-label="open drawer"
+                onClick={handleDrawerOpen}>
+                <MenuIcon />
+              </IconButton>
+            </div>
+          </Toolbar>
+        </AppBar>
+      </div>
     </Headroom>
+    <Drawer anchor='right' variant="persistent" open={state.drawerIsOpen}>
+      <div>
+        <IconButton onClick={handleDrawerClose}>
+          <ChevronLeftIcon />
+        </IconButton>
+      </div>
+      <List>
+        <ListItem>drawer content</ListItem>
+        <ListItem>drawer content</ListItem>
+        <ListItem>drawer content</ListItem>
+        <ListItem>drawer content</ListItem>
+        <ListItem>drawer content</ListItem>
+      </List>
+    </Drawer>
+    </React.Fragment>
   )
 }

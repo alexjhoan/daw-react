@@ -8,25 +8,16 @@
 .headroom {
     transition: all 0.5s ease-in-out!important;
 }
-nav.bg-light {
-  background-color: rgba(255, 255, 255, 0.7) !important;
+header {
+    box-shadow: none!important;
 }
-.navbar-custom {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: row !important;
-  -ms-flex-direction: row !important;
-  flex-direction: row !important;
-  -webkit-justify-content: space-between !important;
-  -ms-flex-pack: justify !important;
-  justify-content: space-between !important;
-  -webkit-align-items: center !important;
-  -ms-flex-align: center !important;
-  align-items: center !important;
-  padding: 5px 0;
-  margin: 0 auto;
+.MuiToolbar-root {
+    justify-content: space-between;
 }
+.MuiSvgIcon-root {
+    fill: #808080!important;
+}
+
 .left-menu,
 .right-menu {
   display: -ms-flexbox;
@@ -39,11 +30,11 @@ nav.bg-light {
   -ms-flex-align: center;
   align-items: center;
 }
-.navbar-brand img {
+.logo-text img {
   width: 40px;
   margin-right: 10px;
 }
-.navbar-brand p {
+.logo-text p {
   color: #332f30;
   font-family: "Open Sans Condensed", sans-serif;
   font-weight: 700;
@@ -51,7 +42,7 @@ nav.bg-light {
   line-height: 0.9;
   margin-bottom: 0;
 }
-.navbar-brand p span:last-child {
+.logo-text p span:last-child {
   font-weight: 700;
   font-size: 1.9em;
 }
@@ -62,19 +53,6 @@ nav.bg-light {
   position: relative;
   transform: none;
   opacity: 1;
-}
-form.search {
-  margin-right: 10px;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
 }
 .search input {
   opacity: 0;
@@ -114,7 +92,7 @@ a.nav-profile {
   background-repeat: no-repeat;
   text-align: center;
   line-height: 35px;
-  margin-right: 5px;
+  margin-right: 12px;
 }
 .right-menu .accordion button {
   background: transparent !important;

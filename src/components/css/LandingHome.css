@@ -89,12 +89,18 @@ button.btn:hover {
 }
 button.btn svg{
   position: absolute;
-  right: 15px;
+  right: 7px;
   top: 48%;
-  transform: translateY(-42%);
+  transform: translateY(-43%);
   opacity: 0;
   transition: all 0.15s ease-in-out;
 }
 button.btn:hover svg {
   opacity: 1;
 }
+
+
+button.btn:hover svg path{
+  fill: #332f30;
+}
+

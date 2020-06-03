@@ -74,6 +74,30 @@
   box-shadow: 0px -10px 15px rgba(0,0,0,.2);
 }
 
+.carousel button {
+    background: transparent;
+    border: transparent;
+    position: absolute;
+    top: 40%;
+}
+
+.carousel button svg {
+    width: 60px;
+    height: 60px;
+}
+
+.carousel button svg path{
+    fill:#fff;
+}
+
+.carousel__back-button {
+    left: 0;
+}
+
+.carousel__next-button {
+    right: 20px;
+}
+
 .item-slider {
   position: relative;
   overflow: hidden;
@@ -153,7 +177,7 @@ a:hover ~ .infoCollection p:last-of-type {
 }
 
 .item-slider span.icons-like {
-  top: 0px;
+  top: 6px;
   position: absolute;
   right: 12px;
   z-index: 3;
@@ -163,14 +187,14 @@ a:hover ~ .infoCollection p:last-of-type {
   height: 40px;
 }
 
-.item-slider span.icons-like a {
-  height: 25px;
-  line-height: 30px;
-  color: #fff;
-  font-size: 25px;
-}
-
 .item-slider span.icons-like a.shared {
   margin-right: 15px;
-  transform: translateY(-3px);
+}
+.item-slider span.icons-like svg {
+    width: 33px;
+    height: 33px;
+}
+
+.item-slider span.icons-like svg path {
+    fill: #fff;
 }

@@ -1,7 +1,6 @@
 import React from "react"
 import {Container, Row, Col} from "react-bootstrap"
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
-import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
+import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import Carousel from './Carousels/Carousel'
 import Magazines from './Carousels/Magazines'
 import Collections from './Carousels/Collections'
@@ -19,7 +18,7 @@ export default function LandingHome() {
               <h2>#ComunidadViajera</h2>
               <button className="btn bg-yellow btn-header-home">
                 Manifiesto
-                <FontAwesomeIcon icon={faAngleRight} />
+                <ChevronRightIcon />
               </button>
             </div>
           </Col>

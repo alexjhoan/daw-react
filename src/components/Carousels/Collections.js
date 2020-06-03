@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel'
 import 'pure-react-carousel/dist/react-carousel.es.css'
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
-import {faBookmark} from "@fortawesome/free-solid-svg-icons"
+import ChevronRightIcon from '@material-ui/icons/ChevronRight'
+import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
+import BookmarkIcon from '@material-ui/icons/Bookmark'
 import SharedWhite from "../../assets/images/icons/i_shared_white.svg"
 import ItemCarouselBg from '../../assets/images/collection/collection2.jpg'
 import {DataMagazine} from "./Magazines.json"
@@ -15,7 +16,7 @@ export default function Collections(props:any) {
       <Slide index={i} key={i}>
         <div className="item-slider">
           <a className="img_carousel" href="#"></a>
-          <div className="bg_img_carousel" style={{backgroundImage: "url(" + ItemCarouselBg + ")"}}></div>
+          <div className="bg_img_carousel" style={{backgroundImage: "url(" + a.urlImage + ")"}}></div>
           <div className="infoCollection">
             <p>Collections</p>
             <h4>
@@ -28,7 +29,7 @@ export default function Collections(props:any) {
               <img src={SharedWhite} alt="share" />
             </a>
             <a href="#">
-              <FontAwesomeIcon icon={faBookmark} />
+              <BookmarkIcon />
             </a>
           </span>
         </div>
@@ -47,8 +48,8 @@ export default function Collections(props:any) {
       <Slider>
         {dataCollectionsImp}
       </Slider>
-      <ButtonBack>Back</ButtonBack>
-      <ButtonNext>Next</ButtonNext>
+      <ButtonBack><ChevronLeftIcon /></ButtonBack>
+      <ButtonNext><ChevronRightIcon /></ButtonNext>
     </CarouselProvider>
   )
 }
