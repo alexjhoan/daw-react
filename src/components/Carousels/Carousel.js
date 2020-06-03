@@ -1,7 +1,6 @@
 import React from "react"
 import {Container, Row, Col} from "react-bootstrap"
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
-import {faAngleRight, faAngleLeft} from "@fortawesome/free-solid-svg-icons"
+import ChevronRightIcon from '@material-ui/icons/ChevronRight'
 import "../css/Carousel.css"
 
 export default function Carousels(props: any) {
@@ -19,7 +18,7 @@ export default function Carousels(props: any) {
               <span className="textYellow">#</span>
               VerTodo
               <span className="buttonArrow">
-                <FontAwesomeIcon icon={faAngleRight} />
+                <ChevronRightIcon />
               </span>
             </a>
           </div>

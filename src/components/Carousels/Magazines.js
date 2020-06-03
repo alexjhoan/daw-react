@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel'
 import 'pure-react-carousel/dist/react-carousel.es.css'
 import ChevronRightIcon from '@material-ui/icons/ChevronRight'
@@ -8,14 +8,11 @@ import SharedWhite from "../../assets/images/icons/i_shared_white.svg"
 import {DataMagazine} from "./Magazines.json"
 
 export default function Magazines(props:any) {
-
-  const dataMagazines = Object.values(DataMagazine)
-  const dataMagazinesImp = dataMagazines.map((a, i) => {
-
+  const dataMagazinesImp = DataMagazine.map((a, i) => {
     return (
       <Slide index={i} key={i}>
         <div className="item-slider">
-          <a className="img_carousel" href="#"></a>
+          <a className="img_carousel" href="#"> </a>
           <div className="bg_img_carousel" style={{backgroundImage: "url(" + a.urlImage + ")"}}></div>
           <div className="infoCollection">
             <p>Magazines</p>

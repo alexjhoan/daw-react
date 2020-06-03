@@ -4,6 +4,7 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import Carousel from './Carousels/Carousel'
 import Magazines from './Carousels/Magazines'
 import Collections from './Carousels/Collections'
+import Experts from './Carousels/Experts'
 
 import "./css/LandingHome.css"
 
@@ -29,6 +30,9 @@ export default function LandingHome() {
       </Carousel>
       <Carousel titleCarousel="Colecciones" urlSeeAll="#">
         <Collections />
+      </Carousel>
+      <Carousel titleCarousel="PublicacionesDeExpertos" urlSeeAll="#">
+        <Experts />
       </Carousel>
     </React.Fragment>
   )

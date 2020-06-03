@@ -46,18 +46,22 @@
   border-radius: 45px;
   transition: 0.5s ease-out;
   text-decoration: none;
+  color: #332f30;
 }
 
 .titleCarousel a span.buttonArrow {
-  right: 10px;
+  top: 3px;
+  right: 4px;
   display: flex;
   position: absolute;
-  font-size: 20px;
   transition: 0.3s ease-in-out;
   flex-direction: row;
   align-items: center;
-  color: #f4c811;
   opacity: 0;
+}
+
+.titleCarousel a span.buttonArrow svg path {
+  fill: #332f30;
 }
 
 .titleCarousel a:hover span.buttonArrow {
@@ -65,38 +69,40 @@
   transition: 0.2s ease-in-out;
 }
 
-/*------------------items-carousels-----------------------*/
+/*------------------carousels-----------------------*/
 
 .section-carousel {
   background-color: #fff;
   transition: all 0.5s ease;
-  padding: 60px 0 80px!important;
-  box-shadow: 0px -10px 15px rgba(0,0,0,.2);
+  padding: 60px 0 80px !important;
+  box-shadow: 0px -10px 15px rgba(0, 0, 0, 0.2);
 }
 
 .carousel button {
-    background: transparent;
-    border: transparent;
-    position: absolute;
-    top: 40%;
+  background: transparent;
+  border: transparent;
+  position: absolute;
+  top: 40%;
 }
 
 .carousel button svg {
-    width: 60px;
-    height: 60px;
+  width: 60px;
+  height: 60px;
 }
 
-.carousel button svg path{
-    fill:#fff;
+.carousel button svg path {
+  fill: #fff;
 }
 
 .carousel__back-button {
-    left: 0;
+  left: 0;
 }
 
 .carousel__next-button {
-    right: 20px;
+  right: 20px;
 }
+
+/*--------------------------Magazines--------------------------------*/
 
 .item-slider {
   position: relative;
@@ -127,7 +133,7 @@ a.img_carousel ~ .bg_img_carousel {
 a.img_carousel:hover ~ .bg_img_carousel {
   transform: scale(1.05);
 }
-.item-slider a.img_carousel ~ .bg_img_carousel:after {
+a.img_carousel ~ .bg_img_carousel:after {
   content: "";
   position: absolute;
   left: 0;
@@ -139,7 +145,7 @@ a.img_carousel:hover ~ .bg_img_carousel {
   opacity: 0.5;
   transition: all 0.3s ease-in-out;
 }
-.item-slider a.img_carousel:hover ~ .bg_img_carousel:after {
+a.img_carousel:hover ~ .bg_img_carousel:after {
   opacity: 1;
 }
 .item-slider h4 {
@@ -191,10 +197,108 @@ a:hover ~ .infoCollection p:last-of-type {
   margin-right: 15px;
 }
 .item-slider span.icons-like svg {
-    width: 33px;
-    height: 33px;
+  width: 33px;
+  height: 33px;
 }
 
 .item-slider span.icons-like svg path {
-    fill: #fff;
+  fill: #fff;
+}
+
+/*------------------------Experts-----------------------------*/
+
+.item {
+  border-right: solid 20px #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.item .bg_img_carousel {
+  height: 45vh;
+}
+
+.item div.info-carousel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  color: #fff;
+  height: auto;
+  width: 100%;
+  max-width: 100%;
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.item span.icons-like{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  z-index: 3;
+}
+
+.item span.icons-like svg path {
+  fill: #fff;
+}
+
+.item span.icons-like .iconHeart:hover path {
+    fill:red;
+    cursor: pointer;
+}
+.item span.icons-like .iconMarkBook:hover path{
+    fill:#f4c811;
+    cursor: pointer;
+}
+
+.item img.icon-publications {
+    position: absolute;
+    width: auto!important;
+    height: 35px;
+    right: 10px;
+    top: 10px;
+    z-index: 3;
+}
+
+.item img.icon-publications:hover{
+  cursor: pointer;
+}
+
+    .item img.icon-publications.microphone {
+        height: 40px!important;
+    }
+
+    .item img.icon-publications.video {
+        height: 30px!important;
+        top: 12px;
+    }
+
+.item p.hastags {
+    line-height: 1em;
+    font-size: 1rem;
+    font-weight: 300;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+.item p.author {
+    margin-bottom: 0;
+}
+.item .author a img {
+    width: 25px!important;
+    height: auto!important;
+    border-radius: 100%;
+    display: inline-block!important;
+}
+
+p.author a {
+    font-weight: 300;
+    font-size: .9rem;
+    position: relative;
+    z-index: 3;
+
+}
+p.author a:hover {
+    text-decoration: none;
+    cursor: pointer;
 }
