@@ -30,7 +30,7 @@ h2 {
 
 /*---------------------Utilities---------------------*/
 .w-80 {
-  width: 80%;
+  width: 80%!important;
 }
 .w-60 {
   width: 60% !important;
@@ -43,33 +43,33 @@ h2 {
 }
 .bg-yellow,
 .bg-yellow-outline:hover {
-  background-color: #f4c811;
+  background-color: #f4c811!important;
 }
 .text-yellow,
 .textYellow {
-  color: #f4c811;
+  color: #f4c811!important;
 }
 
 .br-25 {
-  border-radius: 25px;
+  border-radius: 25px!important;
 }
 .bg_lightgray {
-  background: #e6e6e6;
+  background: #e6e6e6!important;
 }
 .bg_gray {
-  background-color: #808080;
+  background-color: #808080!important;
 }
 .text_gray,
 .text_gray a,
 a.text_gray:hover {
-  color: #808080;
+  color: #808080!important;
 }
 .color-orangered {
-  color: #e75d00;
+  color: #e75d00!important;
 }
 .color-darkslategray {
-  color: #444751;
+  color: #444751!important;
 }
 .color-white {
-  color: #fff;
+  color: #fff!important;
 }

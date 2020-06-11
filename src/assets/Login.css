@@ -1,0 +1,342 @@
+.body-modal-inter {
+  padding-top: 40px;
+  padding-bottom: 80px;
+  background-color: #0000001a;
+}
+
+.modal-content {
+  border-radius: 0;
+}
+
+.header-modal-inter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed!important;
+    z-index: 1;
+    right: 8px;
+}
+.content-social-auth {
+  background: url(./images/header-home.jpg) fixed no-repeat center center;
+  background-size: cover;
+  background-position-y: top;
+  background-position-x: 60%;
+}
+.content-social-auth {
+  border: 0;
+}
+.content-social-auth .close {
+  opacity: 1;
+}
+
+.content-social-auth .close span {
+  font-size: 2.5em;
+  color: #fff;
+  font-weight: 300;
+}
+
+.content-social-auth .close:focus {
+  box-shadow: none;
+}
+.content-social-auth .close:hover {
+  opacity: 0.5;
+}
+.content-social-auth span {
+  font-size: 1em;
+}
+.logo-text-lightbox {
+  max-width: 98%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+.logo-text-lightbox img {
+  width: 4em;
+  margin-right: 10px;
+}
+.logo-text-lightbox p {
+  color: #332f30;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 2em;
+  line-height: 0.9;
+  margin-bottom: 0;
+}
+
+.logo-text-lightbox p span {
+  font-family: "Open Sans Condensed", sans-serif;
+}
+
+.logo-text-lightbox p span:last-child {
+  font-weight: 700;
+  font-size: 1.9em;
+}
+
+span.separator {
+  position: relative;
+}
+
+span.separator:before,
+span.separator:after {
+  content: "";
+  position: absolute;
+  width: 45%;
+  height: 1px;
+  background-color: #332f30;
+  top: 60%;
+  transform: translateY(-50%);
+  display: inline-block;
+  opacity: 0.5;
+}
+
+span.separator:before {
+  left: 0;
+}
+
+span.separator:after {
+  right: 0;
+}
+
+.body-social-auth {
+  background: #f7fafc;
+  width: 475px;
+  max-width: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 5px 5px 15px #000;
+}
+
+.content-social-auth div#nav-tabContent {
+  padding: 30px;
+}
+
+.body-social-auth .nav-tabs .nav-link.active {
+  background-color: #f7fafc;
+  border: transparent;
+}
+
+.body-social-auth .nav-tabs .nav-link:not(.active) {
+  border-bottom: 2px solid rgba(51, 47, 48, 0.2);
+  border-right: 2px solid rgba(51, 47, 48, 0.2);
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 0;
+  box-shadow: inset -5px -5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.body-social-auth div#nav-tab {
+  border: 0;
+}
+
+.body-social-auth .nav-tabs .nav-link:not(.active):last-child {
+  border-right: 0 !important;
+  border-left: 2px solid rgba(51, 47, 48, 0.2);
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 15px;
+}
+form label {
+  position: relative;
+}
+
+form label i {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+form label i.far.fa-eye {
+  left: calc(100% - 30px);
+  color: #f4c811;
+}
+
+form label input:not([type="submit"]) {
+  border-radius: 5px;
+  padding: 10px 10px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  font-size: 20px;
+}
+form label i + input:not([type="submit"]) {
+  padding: 10px 40px;
+}
+.form-group > span.labelInput {
+  font-size: 18px;
+  display: block;
+}
+form label input:not([type="submit"])::placeholder,
+form label textarea::placeholder {
+  color: #e6e6e6;
+}
+form label input:not([type="submit"]),
+form label textarea,
+form label input:not([type="submit"])::placeholder,
+form label textarea::placeholder {
+  font-weight: 300;
+  font-size: 18px;
+}
+form label input:not([type="submit"]),
+form label textarea {
+  color: #808080;
+}
+.container-btn-social-login button:not(.btn-register-email) {
+  text-align: center;
+  width: 100%;
+  font-weight: 500;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin: 5px auto;
+  position: relative;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.body-social-auth a button {
+  background: #fff;
+  border-radius: 30px;
+  color: #332f30;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.body-social-auth a:hover button {
+  transform: translateY(-1px);
+  box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+  text-decoration: none;
+}
+
+.body-social-auth a button i.fa-facebook-f {
+  background: #2a5297;
+  color: #fff;
+  font-size: 0.7em;
+  padding: 5px 7px;
+  border-radius: 5px;
+}
+
+.body-social-auth a button i,
+.body-social-auth a button img {
+  margin-right: 7px;
+}
+
+a.text-yellow:hover {
+  transform: translateY(-1px);
+  color: #f4c811;
+}
+
+button.btn,
+a.btn,
+span.btn,
+input.btn {
+  border: 1px solid #332f30;
+  border-radius: 25px;
+  padding: 5px 35px;
+  font-size: 20px;
+  font-weight: 700;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  position: relative;
+}
+button.btn i,
+a.btn i {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-42%);
+  opacity: 0;
+  transition: all 0.15s ease-in-out;
+}
+button.btn:hover,
+a.btn:hover,
+span.btn:hover,
+input.btn:hover {
+  box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+}
+button.btn:hover i,
+a.btn:hover i {
+  opacity: 1;
+}
+.btn-continue-email {
+  background-color: #7ce36d;
+}
+.container-btn-social-login button i {
+  font-size: 1.2em;
+}
+.container-btn-social-login button.btn-facebook i {
+  margin-right: 8px;
+  position: relative;
+  opacity: 1;
+  top: initial;
+  transform: translateY(0);
+  right: initial;
+}
+.container-btn-social-login button.btn-google i {
+  margin-right: 10px;
+}
+.container-btn-social-login button.btn-continue-email i {
+  margin-right: 15px;
+}
+.container-btn-social-login .btn-register-email {
+  color: #fff;
+  font-weight: 500;
+}
+.container-btn-social-login .btn-register-email:focus {
+  box-shadow: none;
+}
+.container-btn-social-login .btn-register-email:hover {
+  opacity: 0.9;
+}
+.info-auth {
+  margin-top: 1em;
+  width: 400px;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container-btn-social-login a {
+  width: 45%;
+  max-width: 100%;
+  position: relative;
+  display: block;
+}
+
+.container-btn-social-login a:hover {
+  text-decoration: none;
+}
+
+.info-auth p {
+  color: #fff;
+  font-size: 1rem;
+  text-align: center;
+}
+.info-auth p a {
+  color: #fff;
+  text-decoration: underline;
+}
+.modal-dialog-scrollable {
+  max-height: 100%;
+}
+.modal-dialog-scrollable .modal-content {
+  max-height: 100%;
+}
+
+.text-help {
+  font-size: 1.2em;
+}
+.text-email {
+  line-height: 1.1;
+  font-size: 1em;
+}
+input#id_email {
+  width: 100%;
+}

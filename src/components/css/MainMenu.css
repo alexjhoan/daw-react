@@ -1,4 +1,4 @@
-.headroom-wrapper {
+.headroom-wrapper.header {
   position: fixed;
   top: 0;
   width: 100%;
@@ -6,16 +6,16 @@
   transition: all 0.5s ease-in-out;
 }
 .headroom {
-    transition: all 0.5s ease-in-out!important;
+  transition: all 0.5s ease-in-out !important;
 }
 header {
-    box-shadow: none!important;
+  box-shadow: none !important;
 }
 .MuiToolbar-root {
-    justify-content: space-between;
+  justify-content: space-between;
 }
 .MuiSvgIcon-root {
-    fill: #808080!important;
+  fill: #808080 !important;
 }
 
 .left-menu,
@@ -65,6 +65,9 @@ header {
   right: 10px;
   transition: all 0.2s ease-in-out;
   width: 18px;
+}
+.header button.MuiButtonBase-root {
+    margin-right: 0;
 }
 #menuUserLogout {
   position: fixed;
@@ -123,7 +126,7 @@ button:focus {
   outline: none !important;
 }
 nav button.border-0.navbar-toggler {
-    transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 nav .navbar-nav button.navbar-toggler {
   position: absolute;
@@ -136,12 +139,12 @@ nav .navbar-nav button.navbar-toggler span.navbar-toggler-icon {
 }
 nav .navbar-nav button.navbar-toggler span.navbar-toggler-icon:before,
 nav .navbar-nav button.navbar-toggler span.navbar-toggler-icon:after {
-    content: "";
-    position: absolute;
-    width: 12px;
-    height: 2px;
-    top: 50%;
-    background-color: #707070;
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 2px;
+  top: 50%;
+  background-color: #707070;
 }
 nav .navbar-nav button.navbar-toggler span.navbar-toggler-icon:before {
   transform: rotate(45deg);
@@ -153,7 +156,6 @@ nav .navbar-nav button.border-0.navbar-toggler span.navbar-toggler-icon:after {
   background: #bbbbbb;
   padding: 15px 10px 10px;
   min-height: 115px;
-  position: fixed;
   top: 0;
   width: 100%;
   border-top-left-radius: 15px;
@@ -175,7 +177,7 @@ a.btn:hover {
   box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
   cursor: pointer;
 }
-a.btn svg{
+a.btn svg {
   position: absolute;
   right: 15px;
   top: 48%;
@@ -187,39 +189,82 @@ a.btn:hover svg {
   opacity: 1;
 }
 .top_profile a.btn {
-    padding: 5px 35px;
-    color: #332f30!important;
-    line-height: 1;
+  padding: 5px 35px;
+  color: #332f30 !important;
+  line-height: 1;
 }
 .linksMenu {
-    margin-top: 80px;
-    padding: 10px;
+  padding: 10px;
+}
+.linksMenu a figure {
+  margin-bottom: 0;
+  margin-right: 10px;
+  width: 25px;
+}
+.linksMenu a figure,
+.linksMenu a figure img {
+  margin-bottom: 0;
 }
 
-.linksMenu a.nav-link figure, .linksMenu a.nav-link figure img {
-    margin-bottom: 0;
+.linksMenu a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  line-height: 1;
+  color: #332f30 !important;
+  padding: 10px 0;
 }
-
-.linksMenu a.nav-link {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    line-height: 1;
-    color: #332f30!important;
-    padding: 10px 0;
+.MuiPaper-root.MuiDrawer-paper.MuiDrawer-paper {
+  border-top-left-radius: 15px;
 }
-
-.linksMenu a.nav-link figure {
-    margin-right: 10px;
+.MuiAvatar-img {
+  height: auto !important;
+  width: 30px !important;
 }
-
+.MuiAvatar-root {
+  margin-bottom: 10px !important;
+}
+button.close {
+  position: absolute;
+  z-index: 5;
+  right: 5px;
+  top: 5px;
+}
+.footer_nav {
+  text-align: center;
+  margin-top: 20px;
+  padding-bottom: 10px;
+}
+.footer_nav p.text-yellow {
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 18px;
+}
+.footer_nav p.small {
+  color: gray;
+  margin-bottom: 0;
+}
+.footer_nav ul {
+  margin-left: 0;
+  padding-left: 0;
+}
+.footer_nav ul li {
+  list-style: none;
+}
+.footer_nav ul li:not(:last-child) {
+  margin-right: 10px;
+}
 @media (min-width: 992px) {
   .navbar-custom {
     padding: 0.5rem 60px !important;

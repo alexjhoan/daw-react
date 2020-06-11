@@ -2,7 +2,6 @@ import React from "react"
 import {Container, Row, Col} from "react-bootstrap"
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import Carousel from './Carousels/Carousel'
-import Magazines from './Carousels/Magazines'
 import Collections from './Carousels/Collections'
 import Experts from './Carousels/Experts'
 
@@ -25,9 +24,6 @@ export default function LandingHome() {
           </Col>
         </Row>
       </Container>
-      <Carousel titleCarousel="Magazines" urlSeeAll="#">
-        <Magazines />
-      </Carousel>
       <Carousel titleCarousel="Colecciones" urlSeeAll="#">
         <Collections />
       </Carousel>

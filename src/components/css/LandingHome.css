@@ -87,7 +87,7 @@ button.btn:hover {
   box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
   cursor: pointer;
 }
-button.btn svg{
+button.btn svg {
   position: absolute;
   right: 7px;
   top: 48%;
@@ -98,9 +98,16 @@ button.btn svg{
 button.btn:hover svg {
   opacity: 1;
 }
-
-
-button.btn:hover svg path{
+button.btn:hover svg path {
   fill: #332f30;
 }
 
+@media (max-width: 767px) {
+  .text-header h1 {
+    font-size: 2.5em;
+  }
+  .text-header h2 {
+    font-size: 1.8em;
+    letter-spacing: 2px;
+  }
+}
