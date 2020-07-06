@@ -5,10 +5,10 @@ import IconConfiguration from '../../assets/images/icons/i_configuration_white.s
 import IconShared from '../../assets/images/icons/i_share_white.svg'
 import '../Styles/HeadPerfil.css'
 
-const localStg = JSON.parse(localStorage.getItem("itemsLocal"))
+const localStg = JSON.parse(localStorage.getItem("itemsLocal") || "{}")
 
-  let userImg
-  let imgGroups
+  let userImg: any
+  let imgGroups: any
 
   if (localStg) {
     if (localStg.picture) {
@@ -16,7 +16,7 @@ const localStg = JSON.parse(localStorage.getItem("itemsLocal"))
     } else {
       userImg = {backgroundImage: 'url(' + UserDefault + ')'}
     }
-    if (localStg.groups.experto) {
+    if (localStg.groups[0] = "experto") {
       imgGroups = <figure>
                     <img className="mr-2" src={UserExpert} alt="" />
                     Experto
@@ -27,6 +27,7 @@ const localStg = JSON.parse(localStorage.getItem("itemsLocal"))
   }
 
 export default function HeadPerfil() {
+  console.log(localStg.groups[0])
   return (
     <div className="container-fluid" id="head-perfil">
       <div className="row">
@@ -45,15 +46,15 @@ export default function HeadPerfil() {
                 <ul className="d-flex flex-row align-items-start mb-0">
                   <li>
                     <p>Seguidores</p>
-                    <p>0</p>
+                    <p>{localStg.followers || "0"}</p>
                   </li>
                   <li>
                     <p>Seguidos</p>
-                    <p>0</p>
+                    <p>{localStg.followed || "0"}</p>
                   </li>
                   <li>
                     <p>Recorrido</p>
-                    <p>0 <span>km</span></p>
+                    <p>{localStg.traveled || "0"} <span>km</span></p>
                   </li>
                 </ul>
               </div>
