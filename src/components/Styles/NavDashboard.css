@@ -1,0 +1,75 @@
+/*----------------------Menu-Dashboard---------------------*/
+
+nav#navDashboard {
+  background: #fff;
+  margin-top: -30px;
+  z-index: 3;
+  position: relative;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  padding: 15px 0;
+  text-align: center;
+}
+nav#navDashboard a {
+    background: #E6E6E6;
+    border-radius: 0;
+    margin: 0 2px;
+    height: auto;
+    padding: 5px 25px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: none;
+}
+nav#navDashboard a.active,
+nav#navDashboard a:hover {
+   background: #f4c811;
+}
+
+nav#navDashboard a:first-child {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+nav#navDashboard a:last-of-type {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+nav#navDashboard a figure {
+  margin-bottom: 0;
+}
+nav#navDashboard a.active path.a,
+nav#navDashboard a:hover path.a {
+  fill: #fff;
+}
+nav#navDashboard a figure svg {width: auto;height: 25px;}
+
+nav#navDashboard a span {
+  width: 5px;
+  height: 5px;
+  background: #808080;
+  border-radius: 100%;
+  margin: 0 1px;
+}
+
+nav#navDashboard a.active span,
+nav#navDashboard a:hover span {
+  background: #fff;
+}
+
+/*--------------------------Media-Querys-----------------------*/
+
+@media (min-width: 768px){
+  nav#navDashboard a {
+    padding: 5px 30px;
+  }
+}
+
+@media (min-width: 992px){
+  nav#navDashboard {
+    margin-left: 66px!important;
+    margin-right: 66px!important;
+  }
+  nav#navDashboard a {
+    padding: 5px 35px;
+  }
+}

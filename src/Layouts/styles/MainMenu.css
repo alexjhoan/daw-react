@@ -1,0 +1,311 @@
+.headroom-wrapper.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 20;
+  transition: all 0.5s ease-in-out;
+}
+.headroom {
+  transition: all 0.5s ease-in-out !important;
+}
+header {
+  box-shadow: none !important;
+}
+.MuiToolbar-root {
+  justify-content: space-between;
+}
+.MuiSvgIcon-root {
+  fill: #808080 !important;
+}
+
+.left-menu,
+.right-menu {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.logo-text img {
+  margin-right: 10px;
+}
+.logo-text p {
+  color: #332f30;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 0.9;
+  margin-bottom: 0;
+}
+.logo-text p span:last-child {
+  font-weight: 700;
+  font-size: 1.9em;
+}
+.textYellow {
+  color: #f4c811;
+}
+.navbar button.btn svg {
+  position: relative;
+  transform: none;
+  opacity: 1;
+}
+.search input {
+  opacity: 0;
+  width: 0;
+  transition: all 0.3s ease-in-out;
+}
+.search img {
+  line-height: 1;
+  position: absolute;
+  right: 10px;
+  transition: all 0.2s ease-in-out;
+  width: 18px;
+}
+.header button.MuiButtonBase-root {
+    margin-right: 0;
+}
+#menuUserLogout {
+  position: fixed;
+  right: -15px;
+  top: 0;
+  border-top-left-radius: 15px;
+  padding: 0;
+  min-height: 50vh;
+  max-height: 100vh;
+  overflow-y: scroll;
+  background: #f6f5f5;
+  min-width: 250px;
+  z-index: 1500;
+  padding-top: 30px;
+}
+button.nav-profile {
+  border-radius: 100%;
+  min-width: 25px;
+  width: 21px;
+  height: 21px;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  line-height: 35px;
+  margin-right: 12px!important;
+  border: none;
+  background-color: transparent;
+}
+.makeStyles-searchIcon-5:hover{
+  cursor: pointer;
+}
+.right-menu .accordion button {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  color: #707070;
+}
+#navCollapse-profile {
+  position: fixed;
+  right: -15px;
+  top: 0;
+  border-top-left-radius: 15px;
+  padding: 0;
+  min-height: 50vh;
+  max-height: 100vh;
+  overflow-y: scroll;
+  background: #f6f5f5;
+  min-width: 250px;
+  z-index: 1500;
+  padding-top: 30px;
+  transform: translateX(100%);
+  transition: transform 0.2s ease-in-out;
+}
+#navCollapse-profile.show {
+  transform: translateX(0);
+}
+button:focus {
+  outline: none !important;
+}
+nav button.border-0.navbar-toggler {
+  transition: all 0.2s ease-in-out;
+}
+nav .navbar-nav button.navbar-toggler {
+  position: absolute;
+  z-index: 1501;
+  right: 0;
+  top: 0;
+}
+nav .navbar-nav button.navbar-toggler span.navbar-toggler-icon {
+  background: none;
+}
+nav .navbar-nav button.navbar-toggler span.navbar-toggler-icon:before,
+nav .navbar-nav button.navbar-toggler span.navbar-toggler-icon:after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 2px;
+  top: 50%;
+  background-color: #707070;
+}
+nav .navbar-nav button.navbar-toggler span.navbar-toggler-icon:before {
+  transform: rotate(45deg);
+}
+nav .navbar-nav button.border-0.navbar-toggler span.navbar-toggler-icon:after {
+  transform: rotate(-45deg);
+}
+.top_profile {
+  background: #bbbbbb;
+  padding: 15px 10px 10px;
+  min-height: 115px;
+  top: 0;
+  width: 100%;
+  border-top-left-radius: 15px;
+  max-width: 260px;
+  z-index: 1;
+}
+
+a.btn {
+  border: 1px solid #332f30;
+  border-radius: 25px;
+  padding: 5px 35px;
+  font-size: 20px;
+  font-weight: 700;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  position: relative;
+}
+a.btn:hover {
+  box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+}
+a.btn svg {
+  position: absolute;
+  right: 15px;
+  top: 48%;
+  transform: translateY(-42%);
+  opacity: 0;
+  transition: all 0.15s ease-in-out;
+}
+a.btn:hover svg {
+  opacity: 1;
+}
+.top_profile a.btn {
+  padding: 5px 35px;
+  color: #332f30 !important;
+  line-height: 1;
+}
+.linksMenu {
+  padding: 10px;
+}
+.linksMenu a figure {
+  margin-bottom: 0;
+  margin-right: 10px;
+  width: 25px;
+}
+.linksMenu a figure,
+.linksMenu a figure img {
+  margin-bottom: 0;
+}
+
+.linksMenu a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  line-height: 1;
+  color: #332f30 !important;
+  padding: 10px 0;
+}
+.MuiPaper-root.MuiDrawer-paper.MuiDrawer-paper {
+  border-top-left-radius: 15px;
+}
+.MuiAvatar-img {
+  height: auto !important;
+  width: 30px !important;
+}
+.MuiAvatar-root {
+  margin-bottom: 10px !important;
+}
+
+.footer_nav {
+  text-align: center;
+  margin-top: 20px;
+  padding-bottom: 10px;
+}
+.footer_nav p.text-yellow {
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 18px;
+}
+.footer_nav p.small {
+  color: gray;
+  margin-bottom: 0;
+}
+.footer_nav ul {
+  margin-left: 0;
+  padding-left: 0;
+}
+.footer_nav ul li {
+  list-style: none;
+}
+.footer_nav ul li:not(:last-child) {
+  margin-right: 10px;
+}
+@media (min-width: 992px) {
+  .navbar-custom {
+    padding: 0.5rem 60px !important;
+  }
+}
+
+/*--------------------Login----------------------*/
+
+button.close {
+  position: absolute;
+  z-index: 5;
+  right: 15px;
+  top: 0px;
+  opacity: 1;
+  border: solid 1px var(--daw-darkGray)!important;
+  box-shadow: 1px 1px 5px var(--daw-darkGray)!important;
+}
+
+button.MuiButtonBase-root.MuiButton-root.MuiButton-text.close {
+  background: #fff;
+  height: 25px;
+  width: 25px;
+  padding: 13px 13px 15px 15px;
+  border-radius: 50em;
+  min-width: 25px;
+}
+
+button.MuiButtonBase-root.MuiButton-root.MuiButton-text.close span{
+  font-size: 2.5rem;
+}
+
+.MuiPaper-root.MuiDialog-paper.MuiDialog-paperScrollPaper.MuiDialog-paperWidthSm.MuiPaper-elevation24.MuiPaper-rounded {
+    background-color: transparent!important;
+    padding: 15px 30px 0;
+    box-shadow: none!important;
+}
+
+.MuiDialog-paper{
+  margin:0!important;
+}
+
+div#nav-tabContent {
+    padding: 20px 30px!important;
+}

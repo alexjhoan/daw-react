@@ -1,11 +1,9 @@
 import React from "react"
 import {Container, Row, Col} from "react-bootstrap"
-import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-import Carousel from './Carousels/Carousel'
+import LandingSections from './LandingSections'
 import Collections from './Carousels/Collections'
 import Experts from './Carousels/Experts'
-
-import "./css/LandingHome.css"
+import "./Styles/LandingHome.css"
 
 export default function LandingHome() {
   return (
@@ -16,20 +14,19 @@ export default function LandingHome() {
             <div className="text-header">
               <h1>DREAMAWAY</h1>
               <h2>#ComunidadViajera</h2>
-              <button className="btn bg-yellow btn-header-home">
+              <button className="DawBtn">
                 Manifiesto
-                <ChevronRightIcon />
               </button>
             </div>
           </Col>
         </Row>
       </Container>
-      <Carousel titleCarousel="Colecciones" urlSeeAll="#">
+      <LandingSections titleCarousel="ColeccionesDe" titleCarouselYellow="Experiencias" urlSeeAll="#">
         <Collections />
-      </Carousel>
-      <Carousel titleCarousel="PublicacionesDeExpertos" urlSeeAll="#">
+      </LandingSections>
+      <LandingSections titleCarousel="PublicacionesDe" titleCarouselYellow="Expertos" urlSeeAll="#">
         <Experts />
-      </Carousel>
+      </LandingSections>
     </React.Fragment>
   )
 }

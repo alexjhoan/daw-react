@@ -1,0 +1,44 @@
+.header-home {
+  background-image: url(../../assets/images/header-home.jpg);
+  background-attachment: fixed;
+  height: 100vh;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: cente;
+}
+.text-header {
+  text-align: center;
+}
+.text-header h1,
+.text-header h2 {
+  color: #f4c811;
+  text-shadow: 0 3px 5px #332f30;
+}
+.text-header h1 {
+  font-size: 5.5em;
+  color: #f4c811;
+  margin-bottom: 0;
+  font-weight: 800;
+}
+.text-header h2 {
+  font-size: 2.2em;
+  margin-bottom: 1.5rem;
+  color: #fff;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+}
+
+@media (max-width: 767px) {
+  .text-header h1 {
+    font-size: 2.5em;
+  }
+  .text-header h2 {
+    font-size: 1.8em;
+    letter-spacing: 2px;
+  }
+}

@@ -1,7 +1,8 @@
 .body-modal-inter {
-  padding-top: 40px;
-  padding-bottom: 80px;
+  padding-top: 60px;
   background-color: #0000001a;
+  min-height: 100vh;
+  padding-bottom: 80px;
 }
 
 .modal-content {
@@ -9,13 +10,13 @@
 }
 
 .header-modal-inter {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed!important;
-    z-index: 1;
-    right: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed !important;
+  z-index: 1;
+  right: 8px;
 }
 .content-social-auth {
   background: url(./images/header-home.jpg) fixed no-repeat center center;
@@ -52,10 +53,6 @@
   margin-top: 1em;
   padding-top: 1em;
   padding-bottom: 1em;
-}
-.logo-text-lightbox img {
-  width: 4em;
-  margin-right: 10px;
 }
 .logo-text-lightbox p {
   color: #332f30;
@@ -339,4 +336,29 @@ a.btn:hover i {
 }
 input#id_email {
   width: 100%;
+}
+
+.body-modal-inter form.formRestore {
+  width: 600px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.body-modal-inter form.formRestore input {
+  border: none;
+  border-bottom: solid 2px var(--daw-gray);
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  padding-left: 37px;
+}
+
+.body-modal-inter form.formRestore label svg {
+  transform: translate(7px, 39px);
+}
+
+.closeModal button.close span {
+  font-size: 2.6em;
+  margin-right: 23px;
+  font-weight: 400;
 }

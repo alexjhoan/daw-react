@@ -5,7 +5,7 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight'
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
 import BookmarkIcon from '@material-ui/icons/Bookmark'
 import SharedWhite from "../../assets/images/icons/i_shared_white.svg"
-import {DataMagazine} from "./Magazines.json"
+import {DataMagazine} from '../../utils/Magazines.json'
 
 export default function Collections(props:any) {
   const dataCollectionsImp = DataMagazine.map((a, i) => {
@@ -15,20 +15,18 @@ export default function Collections(props:any) {
           <a className="img_carousel" href="#"> </a>
           <div className="bg_img_carousel" style={{backgroundImage: "url(" + a.urlImage + ")"}}></div>
           <div className="infoCollection">
-            <p>Collections</p>
+            <p>Colección</p>
             <h4>
               <span className="textYellow">#</span>{a.titleCarousel}
             </h4>
             <p>85 elementos</p>
           </div>
-          <span className="icons-like">
-            <a href="#" className="shared">
-              <img src={SharedWhite} alt="share" />
-            </a>
-            <a href="#">
-              <BookmarkIcon />
-            </a>
-          </span>
+          <a href="#" className="optionImg shared">
+            <img src={SharedWhite} alt="share" />
+          </a>
+          <a href="#" className="optionImg bookMark">
+            <BookmarkIcon />
+          </a>
         </div>
       </Slide>
     )

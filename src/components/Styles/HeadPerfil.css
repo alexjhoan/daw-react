@@ -1,0 +1,140 @@
+ body {
+    margin-bottom: 90px;
+    background: #f6f5f5;
+}
+
+div#head-perfil, #text_about_me {
+  background: #808080 url(../../assets/images/world.png) no-repeat center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+.profile_user {
+    padding: 120px 0 60px;
+    color: #fff;
+    position: relative;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 100px 1fr;
+        grid-template-columns: 100px 1fr;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+}
+.image_profile {
+    width: 110px;
+    min-width: 110px;
+    height: 110px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat
+}
+.grid_data_user {
+    width: 100%;
+}
+.data_user {
+    padding-left: 15px;
+}
+p.name_user {
+    font-weight: 700;
+    font-size: 1.5em;
+    margin-bottom: 0;
+}
+.role_user {
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+.role_user figure {
+    margin-bottom: 0;
+    margin-right: 5px;
+}
+.data_user button {
+    line-height: 1;
+    padding: 4px 45px!important;
+}
+.followers_user {
+    width: 100%;
+    position: relative;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.followers_user ul {
+    padding-left: 15px;
+    width: 100%;
+}
+.followers_user li {
+    list-style: none;
+    text-align: center;
+    font-weight: 500;
+    padding: 0 10px;
+    position: relative;
+}
+.followers_user li:first-child {
+    padding-left: 0;
+}
+.followers_user li:last-child {
+    padding-right: 0;
+}
+.followers_user li:not(:last-child):after {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  background: #fff;
+  top: 0;
+  right: 0;
+}
+.followers_user li p {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
+.followers_user li p:last-child {
+  font-weight: 400;
+  color: #f4c811;
+  font-size: 1.8rem;
+  line-height: 1;
+  margin-bottom: 0;
+}
+.followers_user li p:last-child span {
+  color: #fff;
+  opacity: .7;
+}
+.profile_user button {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  margin-top: 20px;
+}
+.buttons_profile a.configuration {
+    border: 2px solid #fff;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 32px;
+}
+
+.buttons_profile a.shared{
+  transform: translateY(-5px);
+}
+
+
+/*--------------------------Media-Querys-----------------------*/
+
+@media (min-width: 768px){
+  .followers_user li {
+    padding: 0 15px;
+  }
+}
+
+@media (min-width:992px) {
+  .followers_user li {
+    padding: 0 45px;
+  }
+  .buttons_profile {
+    width: 137px;
+    min-width: 137px;
+    padding: 0 15px;
+    margin-left: 70px;
+  }
+}

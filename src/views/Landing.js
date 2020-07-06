@@ -1,7 +1,7 @@
 import React from 'react'
-import MainMenu from '../components/MainMenu'
+import MainMenu from '../Layouts/MainMenu'
 import LandingHome from "../components/LandingHome"
-import BottomNav from '../components/BottomNav'
+import BottomNav from '../Layouts/BottomNav'
 
 export default function Landing() {
   return (

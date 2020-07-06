@@ -1,5 +1,16 @@
 /*-------------------typography---------------------*/
 
+html {
+  --daw-yellow: #fbbb00;
+  --daw-gray: #444242;
+  --daw-darkGray: #808080;
+  --daw-regularGray: #dddddd;
+  --daw-lightGray: #e6e6e6;
+  --daw-extralightGray: #f5f5f5;
+  --daw-red: #d13333;
+  font-size: 16px;
+}
+
 body,
 h1,
 h2,
@@ -15,7 +26,7 @@ textarea,
 a,
 li,
 button {
-  font-family: FuturaBT, Roboto, sans-serif;
+  font-family: Oswald, Roboto, sans-serif;
 }
 h1 {
   font-weight: 700;
@@ -23,10 +34,9 @@ h1 {
   margin: 10px 0 25px;
 }
 h2 {
-  font-family: FuturaCBT;
   font-weight: 400;
-  font-size: calc(2rem - 7px);
 }
+
 
 /*---------------------Utilities---------------------*/
 .w-80 {
@@ -43,33 +53,60 @@ h2 {
 }
 .bg-yellow,
 .bg-yellow-outline:hover {
-  background-color: #f4c811!important;
+  background-color: var(--daw-yellow)!important;
 }
 .text-yellow,
 .textYellow {
-  color: #f4c811!important;
+  color: var(--daw-yellow)!important;
 }
 
 .br-25 {
   border-radius: 25px!important;
 }
 .bg_lightgray {
-  background: #e6e6e6!important;
+  background: var(--daw-lightGray)!important;
 }
 .bg_gray {
-  background-color: #808080!important;
+  background-color: var(--daw-darkGray)!important;
 }
 .text_gray,
 .text_gray a,
 a.text_gray:hover {
-  color: #808080!important;
+  color: var(--daw-gray)!important;
 }
-.color-orangered {
-  color: #e75d00!important;
+
+/*-------------------------Components------------------------*/
+
+.DawBtn {
+  font-family: Roboto;
+  position: relative;
+  font-size: 20px;
+  padding: 2px 30px;
+  transition: 0.3s ease-out;
+  border-radius: 45px;
+  font-weight: 300;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: var(--daw-yellow);
+  border: transparent;
 }
-.color-darkslategray {
-  color: #444751!important;
+
+.DawBtn:hover {
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border: transparent;
+  box-shadow: 0 2px 4px var(--daw-gray);
+  color: #fff;
 }
-.color-white {
-  color: #fff!important;
+
+
+/*--------------------Medias-Query-------------------*/
+
+@media (min-width:992px) {
+  .MuiToolbar-root {
+    margin: 0 60px;
+}
+  .w-md-80 {
+    width: 80%!important;
+  }
 }

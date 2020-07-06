@@ -5,7 +5,7 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight'
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
 import BookmarkIcon from '@material-ui/icons/Bookmark'
 import SharedWhite from "../../assets/images/icons/i_shared_white.svg"
-import {DataMagazine} from "./Magazines.json"
+import {DataMagazine} from '../../utils/Magazines.json'
 
 export default function Magazines(props:any) {
   const dataMagazinesImp = DataMagazine.map((a, i) => {
@@ -22,12 +22,12 @@ export default function Magazines(props:any) {
             <p>85 elementos</p>
           </div>
           <span className="icons-like">
-            <a href="#" className="shared">
+            <div className="shared">
               <img src={SharedWhite} alt="share" />
-            </a>
-            <a href="#">
+            </div>
+            <div>
               <BookmarkIcon />
-            </a>
+            </div>
           </span>
         </div>
       </Slide>
