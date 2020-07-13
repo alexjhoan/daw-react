@@ -13,7 +13,6 @@ export function login(userData: any, history: any) {
 }
 
 export function logout(history: any) {
-  // remove user from local storage to log user out
   localStorage.removeItem("token")
   window.location.assign("/")
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import '../Styles/NavDashboard.css'
+import '../Styles/dashboard/NavDashboard.css'
 
 export default function NavDashboard() {
   return (
