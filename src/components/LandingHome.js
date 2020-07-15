@@ -1,8 +1,8 @@
 import React from "react"
 import {Container, Row, Col} from "react-bootstrap"
 import LandingSections from './LandingSections'
-import Collections from './Carousels/Collections'
-import Experts from './Carousels/Experts'
+import {Collections} from './Carousels/Collections'
+import {Experts} from './Carousels/Experts'
 import "./Styles/LandingHome.css"
 
 export default function LandingHome() {

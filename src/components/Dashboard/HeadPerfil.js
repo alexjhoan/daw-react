@@ -1,6 +1,7 @@
 import React from 'react'
 import UserDefault from '../../assets/images/icons/user_default.jpg'
 import UserExpert from '../../assets/images/icons/i_expert.svg'
+import UserTraveler from '../../assets/images/icons/i_travelerWhite.svg'
 import IconConfiguration from '../../assets/images/icons/i_configuration_white.svg'
 import IconShared from '../../assets/images/icons/i_share_white.svg'
 import '../Styles/dashboard/HeadPerfil.css'
@@ -16,18 +17,20 @@ const localStg = JSON.parse(localStorage.getItem("itemsLocal") || "{}")
     } else {
       userImg = {backgroundImage: 'url(' + UserDefault + ')'}
     }
-    if (localStg.groups = "experto") {
+    if (localStg.groups == "Experto") {
       imgGroups = <figure>
                     <img className="mr-2" src={UserExpert} alt="" />
                     Experto
                   </figure>
     }else {
-      imgGroups = "Viajero"
+      imgGroups = <figure>
+                    <img className="mr-2" src={UserTraveler} alt="" />
+                    Viajero
+                  </figure>
     }
   }
 
 export default function HeadPerfil() {
-  console.log(localStg.groups[0])
   return (
     <div className="container-fluid" id="head-perfil">
       <div className="row">

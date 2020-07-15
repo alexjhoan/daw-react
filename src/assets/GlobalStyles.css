@@ -1,6 +1,6 @@
 /*-------------------typography---------------------*/
 
-html {
+:root {
   --daw-yellow: #fbbb00;
   --daw-gray: #444242;
   --daw-darkGray: #808080;
@@ -97,6 +97,14 @@ a.text_gray:hover {
   border: transparent;
   box-shadow: 0 2px 4px var(--daw-gray);
   color: #fff;
+}
+
+.DawBtn path{
+  fill: #fff;
+}
+
+.DawBtn.btnAdd {
+    padding: 4px 8px 8px 10px;
 }
 
 

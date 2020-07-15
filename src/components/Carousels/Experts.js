@@ -10,43 +10,56 @@ import Video from "../../assets/images/icons/i_video.svg"
 import iconUser from "../../assets/images/icons/i_user.svg"
 import {DataExperts} from '../../utils/Experts.json'
 
-
-export default function Experts() {
-  const dataExpertsImp = DataExperts.map((a, i) => {
-    let typePublication = ""
-    if (a.typePublication === "Podcast") {
+export function CardExpert(props:any) {
+  let typePublication = ""
+    if (props.typePublication === "Podcast") {
       typePublication = Podcast
-    } else if (a.typePublication === "Video") {
+    } else if (props.typePublication === "Video") {
       typePublication = Video
     } else {
       typePublication = Article
     }
+  return(
+    <React.Fragment>
+      <div className="item-expert">
+        <a className="img_carousel" href="#"> </a>
+        <div className="bg_img_carousel" style={{backgroundImage: "url(" + props.urlImageExpert + ")"}}></div>
+        <div className="iconMarkBook">
+          <BookmarkIcon />
+        </div>
+        <div className="info-carousel">
+          <div>
+            <h4>{props.titleExpert}</h4>
+            <p className="author">
+              <a href="#">
+                <img src={iconUser} alt="userImage"/>
+                @{props.userExpert}
+              </a>
+            </p>
+          </div>
+           <img src={typePublication} alt="..." className="icon-publications" />
+        </div>
+      </div>
+      <p className="hastags">
+        {
+          props.hastags.map((hastags, j) => <span key={j}>#{hastags} </span>)
+        }
+      </p>
+    </React.Fragment>
+  )
+}
+
+export function Experts() {
+  const dataExpertsImp = DataExperts.map((a, i) => {
     return(
       <Slide index={i} key={i}>
-        <div className="item-expert">
-          <a className="img_carousel" href="#"> </a>
-          <div className="bg_img_carousel" style={{backgroundImage: "url(" + a.urlImageExpert + ")"}}></div>
-          <div className="iconMarkBook">
-            <BookmarkIcon />
-          </div>
-          <div className="info-carousel">
-            <div>
-              <h4>{a.titleExpert}</h4>
-              <p className="author">
-                <a href="#">
-                  <img src={iconUser} alt="userImage"/>
-                  @{a.userExpert}
-                </a>
-              </p>
-            </div>
-             <img src={typePublication} alt="..." className="icon-publications" />
-          </div>
-        </div>
-        <p className="hastags">
-          {
-            a.hastags.map((hastags, j) => <span key={j}>#{hastags} </span>)
-          }
-        </p>
+        <CardExpert
+          typePublication={a.typePublication}
+          urlImageExpert={a.urlImageExpert}
+          titleExpert={a.titleExpert}
+          userExpert={a.userExpert}
+          hastags={a.hastags}
+        />
       </Slide>
     )
   })

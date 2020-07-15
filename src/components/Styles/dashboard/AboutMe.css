@@ -24,6 +24,10 @@ p.title {
   padding-top: 15px;
 }
 
+.data_down img {
+    transform: translateY(-3px);
+}
+
 .wrap_image {
   position: relative;
   overflow: hidden;
@@ -182,10 +186,6 @@ div#recent_activities .item_activity {
   transition: 0.2s ease;
 }
 
-div#recent_activities .item_activity:hover {
-  transform: translateY(-3px);
-}
-
 div#recent_activities .item_activity a.linkItem_publication {
   position: absolute;
   z-index: 0;
@@ -323,7 +323,6 @@ div#recent_activities .item_activity:not(:last-child),
         grid-template-columns: 1fr 1fr 1fr;
     -ms-grid-rows: auto;
         grid-template-rows: auto;
-    grid-gap: 15px;
     -webkit-box-align: center;
       -ms-flex-align: center;
               -ms-grid-row-align: center;
@@ -423,10 +422,6 @@ div#recent_activities .item_activity:not(:last-child),
   .image_authors figure {
     width: 30px;
     height: 30px;
-  }
-  div#recent_activities,
-  .contact_list {
-    grid-gap: 15px;
   }
   .item_activity .wrap_text_white div p:last-of-type {
     font-size: 18px;
