@@ -1,5 +1,5 @@
 import React from 'react'
-import '../Styles/dashboard/NavDashboard.css'
+import '../Styles/Dashboard/NavDashboard.css'
 import { Link } from 'react-router-dom'
 
 export default function NavDashboard() {

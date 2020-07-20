@@ -4,7 +4,7 @@ import UserExpert from '../../assets/images/icons/i_expert.svg'
 import UserTraveler from '../../assets/images/icons/i_travelerWhite.svg'
 import IconConfiguration from '../../assets/images/icons/i_configuration_white.svg'
 import IconShared from '../../assets/images/icons/i_share_white.svg'
-import '../Styles/dashboard/HeadPerfil.css'
+import '../Styles/Dashboard/HeadPerfil.css'
 
 const localStg = JSON.parse(localStorage.getItem("itemsLocal") || "{}")
 
@@ -17,7 +17,7 @@ const localStg = JSON.parse(localStorage.getItem("itemsLocal") || "{}")
     } else {
       userImg = {backgroundImage: 'url(' + UserDefault + ')'}
     }
-    if (localStg.groups == "Experto") {
+    if (localStg.groups === "Experto") {
       imgGroups = <figure>
                     <img className="mr-2" src={UserExpert} alt="" />
                     Experto

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="37.514" height="26.844" viewBox="0 0 37.514 26.844">
+  <g id="filtros" transform="translate(-2240.087 -3366.422)">
+    <g id="filtro" transform="translate(2241.587 3366.422)">
+      <line id="Línea_20" data-name="Línea 20" x2="34.514" transform="translate(0 4.154)" fill="none" stroke="#444242" stroke-linecap="round" stroke-width="3"/>
+      <line id="Línea_21" data-name="Línea 21" x2="34.514" transform="translate(0 13.742)" fill="none" stroke="#444242" stroke-linecap="round" stroke-width="3"/>
+      <line id="Línea_22" data-name="Línea 22" x2="34.514" transform="translate(0 23.329)" fill="none" stroke="#444242" stroke-linecap="round" stroke-width="3"/>
+      <circle id="Elipse_30" data-name="Elipse 30" cx="3.835" cy="3.835" r="3.835" transform="translate(22.051 0)" fill="#444242"/>
+      <circle id="Elipse_31" data-name="Elipse 31" cx="3.835" cy="3.835" r="3.835" transform="translate(3.515 9.587)" fill="#444242"/>
+      <circle id="Elipse_32" data-name="Elipse 32" cx="3.835" cy="3.835" r="3.835" transform="translate(22.051 19.174)" fill="#444242"/>
+    </g>
+  </g>
+</svg>

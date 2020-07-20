@@ -1,0 +1,146 @@
+/*---------------------Text-first-filter-----------------------*/
+
+div.firtsFilter{
+  display: flex;
+  flex-direction: row;
+  margin: 15px 0;
+  flex-wrap: wrap;
+}
+
+div.firtsFilter .btnCheckbox {
+  position: relative;
+  margin-right: 30px;
+}
+  .firtsFilter .btnCheckbox input {
+    position: absolute;
+    z-index: 10;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+  }
+    .firtsFilter .btnCheckbox input:hover{
+      cursor: pointer;
+    }
+    .firtsFilter .btnCheckbox label {
+      display: block;
+      text-align: center;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      font-family: Roboto;
+      font-weight: 400;
+      color: grey;
+      margin-bottom: 0;
+    }
+    .firtsFilter .btnCheckbox input:checked ~ label {
+      color: var(--daw-yellow);
+    }
+
+/*--------------------Text-Second-Filter-----------------------*/
+
+div.secondFilter{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+div.secondFilter .btnCheckbox {
+  position: relative;
+  margin-right: 30px;
+}
+  .secondFilter .btnCheckbox input {
+    position: absolute;
+    z-index: 10;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+  }
+    .secondFilter .btnCheckbox input:hover{
+      cursor: pointer;
+    }
+    .secondFilter .btnCheckbox label {
+      display: block;
+      text-align: center;
+      font-size: 20px;
+      text-transform: uppercase;
+      font-family: Roboto;
+      font-weight: 400;
+      color: grey;
+      margin-bottom: 0;
+    }
+    .secondFilter .btnCheckbox input:checked ~ label {
+      color: #FBBB00;
+    }
+
+/*------------------------Tags-Filter--------------------------*/
+
+div.tagsFilter {
+    display: flex;
+    flex-direction: row;
+}
+  .tagsFilter .btnFilter {
+    padding: 6px;
+    border-radius: 50em;
+    margin-right: -22px;
+    z-index: 4;
+    background: var(--daw-regularGray);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid 2px var(--daw-regularGray);
+  }
+
+
+  .tabFilter-carousel .owl-stage {
+    height: 53px;
+    overflow: hidden;
+    margin-left: 30px;
+  }
+
+
+div.tagsFilter .btnCheckbox {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+  .tagsFilter .btnCheckbox input {
+    position: absolute;
+    z-index: 10;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+  }
+    .tagsFilter .btnCheckbox input:hover{
+      cursor: pointer;
+    }
+    .tagsFilter .btnCheckbox label {
+      display: block;
+      text-align: center;
+      font-size: 17px;
+      letter-spacing: 1px;
+      font-family: Roboto;
+      color: var(--daw-gray);
+      margin-bottom: 0;
+      border: solid 2px var(--daw-gray);
+      padding: 12px 0;
+      width: 150px;
+      border-radius: 50em;
+      margin-left: 10px;
+      user-select: none;
+    }
+    .tagsFilter ul{
+      width: 100%!important;
+    }
+    .tagsFilter ul li:first-of-type .btnCheckbox label {
+      margin-left: 30px;
+      width: 200px;
+    }
+    .tagsFilter .btnCheckbox input:checked ~ label {
+      background-color: #f4c81170;
+    }

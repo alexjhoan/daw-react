@@ -1,0 +1,5 @@
+{
+  "DataTagsFilter":["Roma", "Brazil", "China", "Australia", "Restaurantes", "Comida", "Viajes", "España", "Italia", "Deporte"],
+  "DataFirstFilter":["todos","articulos","videos","podcast"],
+  "DataSecondFilter":["todos","articulos","videos","podcast"]
+}

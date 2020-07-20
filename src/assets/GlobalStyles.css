@@ -12,29 +12,34 @@
 }
 
 body,
-h1,
-h2,
 h3,
 h4,
 h5,
 h6,
-p,
 span,
-div,
 input,
 textarea,
 a,
 li,
 button {
-  font-family: Oswald, Roboto, sans-serif;
+  font-family: Roboto, sans-serif;
 }
-h1 {
+h1, .h1{
+  color: var(--daw-gray);
   font-weight: 700;
-  font-size: 30px;
+  font-size: 2rem;
   margin: 10px 0 25px;
+  font-family: Oswald;
 }
-h2 {
+h2, .h2 {
+  color: var(--daw-gray);
+  font-family: Roboto;
   font-weight: 400;
+}
+
+p{
+  font-family: Roboto;
+  font-size: 1.25rem;
 }
 
 
@@ -80,7 +85,7 @@ a.text_gray:hover {
 .DawBtn {
   font-family: Roboto;
   position: relative;
-  font-size: 20px;
+  font-size: 1.3rem;
   padding: 2px 30px;
   transition: 0.3s ease-out;
   border-radius: 45px;
@@ -110,7 +115,24 @@ a.text_gray:hover {
 
 /*--------------------Medias-Query-------------------*/
 
-@media (min-width:992px) {
+@media (max-width: 575px) {
+  .titleCarousel {
+    flex-direction: column;
+    width: 100%;
+  }
+  .titleCarousel p {
+    font-size: 1.5rem;
+  }
+  .DawBtn {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 576px) {}
+
+@media (min-width: 768px) {}
+
+@media (min-width: 992px) {
   .MuiToolbar-root {
     margin: 0 60px;
 }
@@ -118,3 +140,5 @@ a.text_gray:hover {
     width: 80%!important;
   }
 }
+
+@media (min-width: 1200px) {}

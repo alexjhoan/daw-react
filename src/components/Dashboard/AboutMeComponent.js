@@ -1,18 +1,17 @@
 import React, {useState, useEffect }from 'react'
 import axios from 'axios'
 import Button from 'react-bootstrap/Button'
-import CreateIcon from '@material-ui/icons/Create'
-import {CardCollection} from '../Carousels/Collections'
-import {CardExpert} from '../Carousels/Experts'
+import {CardCollection} from '../Miscellaneous/CardCollections'
+import {CardExpert} from '../Miscellaneous/CardExperts'
 import {DataMagazine} from '../../utils/Magazines.json'
 import {DataExperts} from '../../utils/Experts.json'
-import '../Styles/dashboard/AboutMe.css'
 import IconWorld from '../../assets/images/icons/i_internet.svg'
 import IconInstagram from '../../assets/images/icons/i_instagram.svg'
 import IconFacebook from '../../assets/images/icons/i_facebook.svg'
 import IconTwitter from '../../assets/images/icons/i_twitter.svg'
 import IconMail from '../../assets/images/icons/i_mail.svg'
 import IconPhone from '../../assets/images/icons/i_phone.svg'
+import '../Styles/Dashboard/AboutMe.css'
 
 export default function AboutMe() {
 
@@ -35,15 +34,7 @@ export default function AboutMe() {
   const dataExperts = DataExperts[0]
 
   return (
-    <div id="about_me" className="container-fluid">
-      <div className="row">
-        <div className="col-12 titlePublication">
-          <h1 className="text-uppercase text_gray">Información</h1>
-          <button className="DawBtn btnAdd">
-            <CreateIcon />
-          </button>
-        </div>
-      </div>
+    <React.Fragment>
       <div className="row">
         <div className="col-12 col-sm-6 col-md-4 text-white">
           <div id="text_about_me">
@@ -95,6 +86,7 @@ export default function AboutMe() {
             <div className="item_activity item_publication">
               <p className="hastag"><span className="text-yellow">#</span>Publicaciones</p>
               <CardCollection
+                dataListCollection={DataMagazine}
                 urlImage={dataPublication.urlImage}
                 titleCarousel={dataPublication.titleCarousel}
               />
@@ -112,6 +104,7 @@ export default function AboutMe() {
             <div className="item_activity item_publication">
               <p className="hastag"><span className="text-yellow">#</span>Publicaciones</p>
               <CardCollection
+                dataListCollection={DataMagazine}
                 urlImage={dataPublication.urlImage}
                 titleCarousel={dataPublication.titleCarousel}
               />
@@ -160,6 +153,6 @@ export default function AboutMe() {
           </div>
         </div>
       </div>
-    </div>
+    </React.Fragment>
   )
 }

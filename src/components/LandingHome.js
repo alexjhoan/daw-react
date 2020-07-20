@@ -1,8 +1,8 @@
 import React from "react"
 import {Container, Row, Col} from "react-bootstrap"
 import LandingSections from './LandingSections'
-import {Collections} from './Carousels/Collections'
-import {Experts} from './Carousels/Experts'
+import {CarouselCollections} from './Carousels/CarouselCollections'
+import {CarouselExperts} from './Carousels/CarouselExperts'
 import "./Styles/LandingHome.css"
 
 export default function LandingHome() {
@@ -22,10 +22,10 @@ export default function LandingHome() {
         </Row>
       </Container>
       <LandingSections titleCarousel="ColeccionesDe" titleCarouselYellow="Experiencias" urlSeeAll="#">
-        <Collections />
+        <CarouselCollections />
       </LandingSections>
       <LandingSections titleCarousel="PublicacionesDe" titleCarouselYellow="Expertos" urlSeeAll="#">
-        <Experts />
+        <CarouselExperts />
       </LandingSections>
     </React.Fragment>
   )

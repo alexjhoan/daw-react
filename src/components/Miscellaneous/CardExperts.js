@@ -1,14 +1,9 @@
 import React from 'react'
-import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel'
-import 'pure-react-carousel/dist/react-carousel.es.css'
-import BookmarkIcon from '@material-ui/icons/Bookmark'
-import ChevronRightIcon from '@material-ui/icons/ChevronRight'
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
 import Podcast from "../../assets/images/icons/i_microphone.svg"
 import Article from "../../assets/images/icons/i_article.svg"
 import Video from "../../assets/images/icons/i_video.svg"
 import iconUser from "../../assets/images/icons/i_user.svg"
-import {DataExperts} from '../../utils/Experts.json'
+import BookmarkIcon from '@material-ui/icons/Bookmark'
 
 export function CardExpert(props:any) {
   let typePublication = ""
@@ -39,44 +34,29 @@ export function CardExpert(props:any) {
           </div>
            <img src={typePublication} alt="..." className="icon-publications" />
         </div>
-      </div>
-      <p className="hastags">
+        <p className="hastags">
         {
-          props.hastags.map((hastags, j) => <span key={j}>#{hastags} </span>)
+          props.hastags.map((hastags:any, j:any) => <span key={j}>#{hastags} </span>)
         }
       </p>
+      </div>
     </React.Fragment>
   )
 }
 
-export function Experts() {
-  const dataExpertsImp = DataExperts.map((a, i) => {
+export function CardListExperts(props:any){
+  const DatalistExpertImp = props.DatalistExpert.map((a:any, i:any) => {
     return(
-      <Slide index={i} key={i}>
-        <CardExpert
-          typePublication={a.typePublication}
-          urlImageExpert={a.urlImageExpert}
-          titleExpert={a.titleExpert}
-          userExpert={a.userExpert}
-          hastags={a.hastags}
-        />
-      </Slide>
+      <CardExpert
+        typePublication={a.typePublication}
+        urlImageExpert={a.urlImageExpert}
+        titleExpert={a.titleExpert}
+        userExpert={a.userExpert}
+        hastags={a.hastags}
+      />
     )
   })
-
-  return (
-     <CarouselProvider
-      visibleSlides={3}
-      step={1}
-      naturalSlideWidth={4}
-      naturalSlideHeight={3}
-      totalSlides={DataExperts.length}
-      >
-      <Slider>
-        {dataExpertsImp}
-      </Slider>
-      <ButtonBack><ChevronLeftIcon /></ButtonBack>
-      <ButtonNext><ChevronRightIcon /></ButtonNext>
-    </CarouselProvider>
+  return(
+    DatalistExpertImp
   )
 }
