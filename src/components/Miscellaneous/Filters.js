@@ -46,7 +46,7 @@ export function TagsFilter(props:any) {
           touchEnabled={true}
           dragEnabled={true}
           isIntrinsicHeight={true}
-          visibleSlides={2}
+          visibleSlides={1}
           step={1}
           naturalSlideWidth={200}
           naturalSlideHeight={10}

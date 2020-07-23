@@ -14,6 +14,7 @@ export default function Publications() {
         <div className="col-12">
           <div id="publicationsItems">
             <CardListExperts DatalistExpert={DataExperts}/>
+            {/*<p className="h1">Publicaciones</p>*/}
           </div>
         </div>
       </div>

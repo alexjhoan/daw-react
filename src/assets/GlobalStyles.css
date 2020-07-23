@@ -24,28 +24,29 @@ li,
 button {
   font-family: Roboto, sans-serif;
 }
-h1, .h1{
+h1,
+.h1 {
   color: var(--daw-gray);
   font-weight: 700;
   font-size: 2rem;
   margin: 10px 0 25px;
   font-family: Oswald;
 }
-h2, .h2 {
+h2,
+.h2 {
   color: var(--daw-gray);
   font-family: Roboto;
   font-weight: 400;
 }
 
-p{
+p {
   font-family: Roboto;
   font-size: 1.25rem;
 }
 
-
 /*---------------------Utilities---------------------*/
 .w-80 {
-  width: 80%!important;
+  width: 80% !important;
 }
 .w-60 {
   width: 60% !important;
@@ -58,31 +59,32 @@ p{
 }
 .bg-yellow,
 .bg-yellow-outline:hover {
-  background-color: var(--daw-yellow)!important;
+  background-color: var(--daw-yellow) !important;
 }
 .text-yellow,
 .textYellow {
-  color: var(--daw-yellow)!important;
+  color: var(--daw-yellow) !important;
 }
 
 .br-25 {
-  border-radius: 25px!important;
+  border-radius: 25px !important;
 }
 .bg_lightgray {
-  background: var(--daw-lightGray)!important;
+  background: var(--daw-lightGray) !important;
 }
 .bg_gray {
-  background-color: var(--daw-darkGray)!important;
+  background-color: var(--daw-darkGray) !important;
 }
 .text_gray,
 .text_gray a,
 a.text_gray:hover {
-  color: var(--daw-gray)!important;
+  color: var(--daw-gray) !important;
 }
 
 /*-------------------------Components------------------------*/
 
-.DawBtn {
+.DawBtn,
+button.btn-primary {
   font-family: Roboto;
   position: relative;
   font-size: 1.3rem;
@@ -94,24 +96,30 @@ a.text_gray:hover {
   text-transform: uppercase;
   background-color: var(--daw-yellow);
   border: transparent;
+  border: none;
 }
 
-.DawBtn:hover {
+.DawBtn:hover,
+button.btn-primary:focus,
+button.btn-primary:hover,
+button.btn-primary:not(:disabled):not(.disabled):active:focus,
+button.btn-primary:not(:disabled):not(.disabled):active
+{
   text-decoration: none;
   transition: all 0.2s ease;
   border: transparent;
+  background-color: var(--daw-yellow);
   box-shadow: 0 2px 4px var(--daw-gray);
   color: #fff;
 }
 
-.DawBtn path{
+.DawBtn path {
   fill: #fff;
 }
 
 .DawBtn.btnAdd {
-    padding: 4px 8px 8px 10px;
+  padding: 4px 8px 8px 10px;
 }
-
 
 /*--------------------Medias-Query-------------------*/
 
@@ -128,17 +136,20 @@ a.text_gray:hover {
   }
 }
 
-@media (min-width: 576px) {}
+@media (min-width: 576px) {
+}
 
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+}
 
 @media (min-width: 992px) {
   .MuiToolbar-root {
     margin: 0 60px;
-}
+  }
   .w-md-80 {
-    width: 80%!important;
+    width: 80% !important;
   }
 }
 
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+}

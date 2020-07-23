@@ -1,0 +1,33 @@
+.modal-dialog-centered .modal-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.firtStep_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.firtStep_form .formBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 80%;
+  margin: 10vh 0;
+}
+
+.firtStep_form .formBox .imgBoxForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.firtStep_form .formBox .imgBoxForm .btn-primary.btnPublicationCreate {
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 1vh;
+}

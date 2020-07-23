@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="75" height="75" viewBox="0 0 75 75">
+  <g id="Grupo_521" data-name="Grupo 521" transform="translate(-0.26)">
+    <rect id="Rectángulo_391" data-name="Rectángulo 391" width="75" height="75" rx="20" transform="translate(0.26)" fill="#fbbb00"/>
+    <g id="microfono" transform="translate(25.87 18.239)">
+      <path id="Trazado_232" data-name="Trazado 232" d="M737.294,508.392a1.093,1.093,0,0,0-1.095,1.089v4.014a9.01,9.01,0,0,1-18.019,0v-4.014a1.1,1.1,0,0,0-2.19,0v4.014a11.157,11.157,0,0,0,10.1,11.052v2.577h-2.947a1.085,1.085,0,1,0,0,2.17h8.085a1.085,1.085,0,1,0,0-2.17h-2.947v-2.577a11.157,11.157,0,0,0,10.1-11.052v-4.014A1.093,1.093,0,0,0,737.294,508.392Z" transform="translate(-715.99 -490.085)" fill="#fff"/>
+      <path id="Trazado_233" data-name="Trazado 233" d="M727.9,486.495a7.41,7.41,0,0,0-7.143,5.427h9.875a1.46,1.46,0,1,1,0,2.92H720.489v2.286h10.143a1.46,1.46,0,1,1,0,2.92H720.489v2h10.143a1.46,1.46,0,1,1,0,2.92H720.489V509.9a7.411,7.411,0,0,0,14.822,0V493.853A7.394,7.394,0,0,0,727.9,486.495Z" transform="translate(-716.7 -486.495)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

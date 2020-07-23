@@ -1,4 +1,5 @@
 import React from 'react';
+import {Button} from 'react-bootstrap'
 import NavDashboard from './NavDashboard';
 import HeadPerfil from './HeadPerfil';
 import MainMenu from '../../Layouts/MainMenu'
@@ -14,9 +15,9 @@ export default function DashboardComponnet(props: any) {
         <div className="row">
           <div className="col-12 titlePublication">
             <h1 className="text-uppercase text_gray">{props.titleChildren}</h1>
-            <button className="DawBtn btnAdd">
+            <Button className="DawBtn btnAdd" onClick={props.typeBtnOnClick}>
               {props.typeBtn}
-            </button>
+            </Button>
           </div>
         </div>
         {props.children}
