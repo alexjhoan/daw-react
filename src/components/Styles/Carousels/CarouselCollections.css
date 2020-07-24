@@ -20,10 +20,13 @@ a.img_carousel ~ .bg_img_carousel {
   display: block;
   transform: scale(1);
   transition: all 0.3s ease-in-out;
-}
-.item-slider a.img_carousel ~ .bg_img_carousel {
   height: 300px;
 }
+
+a.img_carousel ~ .bg_img_carousel.bg_NotImg {
+    background-size: 50%;
+}
+
 a.img_carousel:hover ~ .bg_img_carousel {
   transform: scale(1.05);
 }

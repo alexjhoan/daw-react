@@ -1,67 +1,67 @@
 {
   "DataExperts":[
     {
-      "titleExpert":"Islandia",
+      "title":"Islandia",
       "urlExpert":"#",
-      "urlImageExpert":"https://picsum.photos/400/300?random=5",
-      "typePublication":"Podcast",
+      "galleries":["https://picsum.photos/400/300?random=5"],
+      "style":"Podcast",
       "hastags":["Islandia","Comida","Viaje","Paisaje"],
-      "userExpert":"GregorioCabeza",
-      "urlUserExpert":"#"
+      "authors":"GregorioCabeza",
+      "urlauthors":"#"
     },
     {
-      "titleExpert":"Grecia",
+      "title":"Grecia",
       "urlExpert":"#",
-      "urlImageExpert":"https://picsum.photos/400/300?random=6",
-      "typePublication":"Video",
+      "galleries":["https://picsum.photos/400/300?random=6"],
+      "style":"Video",
       "hastags":["Grecia","Comida","Viaje","Paisaje"],
-      "userExpert":"GregorioCabeza",
-      "urlUserExpert":"#"
+      "authors":"GregorioCabeza",
+      "urlauthors":"#"
     },
     {
-      "titleExpert":"China",
+      "title":"China",
       "urlExpert":"#",
-      "urlImageExpert":"https://picsum.photos/400/300?random=7",
-      "typePublication":"article",
+      "galleries":["https://picsum.photos/400/300?random=7"],
+      "style":"article",
       "hastags":["China","Comida","Viaje","Paisaje"],
-      "userExpert":"GregorioCabeza",
-      "urlUserExpert":"#"
+      "authors":"GregorioCabeza",
+      "urlauthors":"#"
     },
     {
-      "titleExpert":"España",
+      "title":"España",
       "urlExpert":"#",
-      "urlImageExpert":"https://picsum.photos/400/300?random=8",
-      "typePublication":"Podcast",
+      "galleries":["https://picsum.photos/400/300?random=8"],
+      "style":"Podcast",
       "hastags":["España","Comida","Viaje","Paisaje"],
-      "userExpert":"GregorioCabeza",
-      "urlUserExpert":"#"
+      "authors":"GregorioCabeza",
+      "urlauthors":"#"
     },
     {
-      "titleExpert":"Italia",
+      "title":"Italia",
       "urlExpert":"#",
-      "urlImageExpert":"https://picsum.photos/400/300?random=9",
-      "typePublication":"Video",
+      "galleries":["https://picsum.photos/400/300?random=9"],
+      "style":"Video",
       "hastags":["Italia","Comida","Viaje","Paisaje"],
-      "userExpert":"GregorioCabeza",
-      "urlUserExpert":"#"
+      "authors":"GregorioCabeza",
+      "urlauthors":"#"
     },
     {
-      "titleExpert":"Noruega",
+      "title":"Noruega",
       "urlExpert":"#",
-      "urlImageExpert":"https://picsum.photos/400/300?random=10",
-      "typePublication":"Article",
+      "galleries":["https://picsum.photos/400/300?random=10"],
+      "style":"Article",
       "hastags":["Noruega","Comida","Viaje","Paisaje"],
-      "userExpert":"GregorioCabeza",
-      "urlUserExpert":"#"
+      "authors":"GregorioCabeza",
+      "urlauthors":"#"
     },
     {
-      "titleExpert":"Japon",
+      "title":"Japon",
       "urlExpert":"#",
-      "urlImageExpert":"https://picsum.photos/400/300?random=11",
-      "typePublication":"Podcast",
+      "galleries":["https://picsum.photos/400/300?random=11"],
+      "style":"Podcast",
       "hastags":["Japon","Comida","Viaje","Paisaje"],
-      "userExpert":"GregorioCabeza",
-      "urlUserExpert":"#"
+      "authors":"GregorioCabeza",
+      "urlauthors":"#"
     }
   ]
 }

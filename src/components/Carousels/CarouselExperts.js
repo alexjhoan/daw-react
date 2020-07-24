@@ -12,11 +12,11 @@ export function CarouselExperts() {
     return(
       <Slide index={i} key={i}>
         <CardExpert
-          typePublication={a.typePublication}
-          urlImageExpert={a.urlImageExpert}
-          titleExpert={a.titleExpert}
-          userExpert={a.userExpert}
-          hastags={a.hastags}
+          typePublication={a.style}
+          galleries={a.galleries[0]}
+          authors={a.authors}
+          title={a.title}
+          hastags={a.hastags || ""}
         />
       </Slide>
     )

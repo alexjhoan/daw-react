@@ -94,10 +94,10 @@ export default function AboutMe() {
             <div className="item_activity item_experience">
               <p className="hastag"><span className="text-yellow">#</span>Experiencia</p>
               <CardExpert
-                typePublication={dataExperts.typePublication}
-                urlImageExpert={dataExperts.urlImageExpert}
-                titleExpert={dataExperts.titleExpert}
-                userExpert={dataExperts.userExpert}
+                typePublication={dataExperts.style}
+                galleries={dataExperts.galleries}
+                authors={dataExperts.authors}
+                title={dataExperts.title}
                 hastags={dataExperts.hastags}
               />
             </div>
