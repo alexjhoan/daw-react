@@ -20,7 +20,6 @@ export default function DashboardPublicationsViews(props: any) {
       />
       <LightBox
         show={modalShow}
-        modalSize="xl"
         onHide={() => setModalShow(false)}
         children={
           <PublicationsCreate/>

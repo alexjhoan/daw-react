@@ -6,7 +6,7 @@ export function LightBox(props:any){
   return(
     <Modal
       {...props}
-      size={props.modalSize || "lg"}
+      size={props.modalSize || "xl"}
       aria-labelledby="contained-modal-title-vcenter"
       centered={true}
     >

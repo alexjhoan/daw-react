@@ -1,0 +1,42 @@
+/*-----------------------User-Information-Nav---------------------*/
+.UserInformations.row {
+  min-height: calc(100vh - 5.6rem);
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.UserInformations .colUserNav {
+  border-right: solid 1px var(--daw-regularGray);
+  padding: 0;
+}
+
+.colUserNav .nav-pills .linksInformations.nav-link {
+  color: var(--daw-gray);
+  border-radius: 0;
+  border-bottom: solid 1px var(--daw-regularGray);
+}
+
+.colUserNav .nav-pills .linksInformations.nav-link.active {
+  background-color: #fff;
+  border-right: solid 5px var(--daw-yellow);
+}
+
+/*----------------------basic-Information-form---------------------*/
+
+#formUserData .alignEnd {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.btnSubmit.form-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.btnSubmit.form-group .BtnCancel {
+    margin-right: 50px;
+    background-color: transparent;
+    color: var(--daw-gray);
+}
