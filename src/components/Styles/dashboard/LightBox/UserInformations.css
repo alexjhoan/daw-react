@@ -23,20 +23,291 @@
 
 /*----------------------basic-Information-form---------------------*/
 
-#formUserData .alignEnd {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
+#formProfile input#upImage {
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
 }
 
-.btnSubmit.form-group {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+#formProfile .uploadFile {
+  border: 1px solid #ced4da;
+  border-radius: 3px;
+  background: #fff;
+  width: 160px;
+  height: 160px;
+  overflow: hidden;
+  position: relative;
+  margin-left: auto;
 }
 
-.btnSubmit.form-group .BtnCancel {
-    margin-right: 50px;
-    background-color: transparent;
-    color: var(--daw-gray);
+#formProfile .uploadFile #previewImage {
+  position: absolute;
+  width: auto;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#formProfile .uploadFile label {
+  position: absolute;
+  z-index: 1;
+  right: 5px;
+  bottom: 5px;
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  text-align: center;
+  border: 1px solid #ced4da;
+  border-radius: 100%;
+  background: #fff;
+}
+
+#formProfile .uploadFile label svg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 32px;
+}
+#formProfile .uploadFile label svg path,
+#formProfile .uploadFile label svg circle {
+  fill: var(--daw-regularGray);
+}
+
+#formProfile label.required:after {
+  content: "*";
+  position: absolute;
+  top: 50%;
+  right: -10px;
+  transform: translateY(-45%);
+  color: red;
+  font-size: 20px;
+}
+
+#formProfile label textarea {
+  border: 1px solid var(--daw-regularGray);
+  border-radius: 5px;
+  padding: 15px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+#formProfile label svg,
+#formProfile label img {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#formProfile label svg + input:not([type="submit"]),
+#formProfile label img + input:not([type="submit"]) {
+  padding: 10px 35px;
+}
+
+label.error {
+  position: absolute;
+  font-size: 12px;
+  color: red;
+}
+.add_Social_Networks {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20% 1fr;
+  grid-template-columns: 20% 1fr;
+  grid-column-gap: 12px;
+  -ms-grid-rows: auto;
+  grid-template-rows: auto;
+}
+.updatePhone > span,
+.add_Social_Networks > span {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+#lightbox_profile form label[for="changeCountry"],
+.add_Social_Networks label[for="changeSocial"] {
+  width: 100%;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+#lightbox_profile form label[for="phone"],
+.add_Social_Networks label[for="urlNetwork"] {
+  width: 100%;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+ul#tabsFormProfile a {
+  border-radius: 0;
+  border-top: 0;
+  border-left: 0;
+  border-bottom: 0;
+  text-align: center;
+  position: relative;
+  font-size: 1.1rem;
+  padding: 8px 5px;
+}
+ul.addedNetworks {
+  padding-left: 0;
+}
+ul.addedNetworks li {
+  list-style: none;
+  margin-bottom: 10px;
+  font-weight: 300;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 18px;
+}
+ul.addedNetworks li img {
+  width: 30px;
+  margin-right: 8px;
+}
+.add_Social_Networks label[for="urlNetwork"] button,
+label[for="textExpert"] button {
+  padding: 0;
+  margin-left: 10px;
+}
+.add_Social_Networks label[for="urlNetwork"] img,
+label[for="textExpert"] img {
+  width: 30px;
+}
+.add_Social_Networks label[for="urlNetwork"],
+label[for="textExpert"] {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.add_Social_Networks label[for="urlNetwork"] button:hover {
+  box-shadow: none;
+  transform: none;
+}
+select#changeSocial + .select2 span img {
+  transform: translate(-4px, -4px);
+}
+label span.small {
+  width: 100%;
+  display: block;
+  text-align: right;
+}
+
+label[for="textExpert"] + span.small {
+  display: block;
+  width: 100%;
+  text-align: right;
+  padding-right: 45px;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  width: 100%;
+  opacity: 0;
+  z-index: 1;
+  margin: 0;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  cursor: pointer;
+}
+.form-check input[type="checkbox"] + label:before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #f4c811;
+  left: -20px;
+  background: #fff;
+}
+.form-check label:after {
+  content: "";
+  left: -16px;
+  top: 8px;
+  width: 4px;
+  height: 8px;
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  opacity: 0;
+}
+input[type="checkbox"]:checked + label:before {
+  background: #f4c811;
+}
+input[type="checkbox"]:checked + label:after {
+  opacity: 1;
+}
+
+p.titleForm {
+  font-weight: bold;
+  font-size: 20px;
+}
+.lightbox_profile a.textYellow:hover {
+  color: #f4c811;
+  text-decoration: underline;
+}
+.contentTabsProfile .tab-content {
+  padding-bottom: 30px;
+}
+.tab_drawer_heading {
+  display: none;
+}
+
+.selectCard .form-check {
+  padding-left: 0;
+  padding-right: 1.25rem;
+}
+.selectCard .form-check input[type="radio"] + label {
+  border: 2px solid;
+  border-color: transparent;
+}
+.selectCard .form-check input[type="radio"]:checked + label {
+  border-color: #f4c811;
+}
+.hide-calendar table.ui-datepicker-calendar,
+.hide-calendar a:not([href]):not([tabindex]) {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .contentTabsProfile {
+    display: grid;
+    grid-template-columns: 22% 1fr;
+    grid-column-gap: 30px;
+  }
+  ul#tabsFormProfile {
+    border-right: 1px solid #ced4da;
+    border-bottom: 0;
+  }
+  ul#tabsFormProfile a.active {
+    background: #f6f5f5;
+  }
+  ul#tabsFormProfile a.active:after {
+    content: "";
+    position: absolute;
+    right: -2px;
+    width: 3px;
+    height: 100%;
+    background: #f4c811;
+    top: 0;
+  }
+  ul#tabsFormProfile li {
+    border-bottom: 1px solid #ced4da;
+  }
+  #lightbox_profile .modal-body,
+  #lightbox_profile .modal-body .container > .row > .col-12 {
+    padding-left: 0;
+  }
+}
+
+.SaveButtons .btn.BtnCancel {
+  margin-right: 50px;
+  background-color: transparent;
+  color: var(--daw-gray);
 }
