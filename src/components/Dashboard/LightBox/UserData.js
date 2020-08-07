@@ -14,7 +14,7 @@ import TwitterIcon from "@material-ui/icons/Twitter"
 export default function UserData() {
   const [previewImage, setPreviewImage] = React.useState(iconUserNotImg)
 
-  const handleChange = (e) => {
+  const handleChange = (e:any) => {
     e.preventDefault()
     setPreviewImage(URL.createObjectURL(e.target.files[0]))
   }
@@ -27,7 +27,7 @@ export default function UserData() {
             <div className="col-lg-6">
               <div className="form-group py-2 mb-0">
                 <span className="labelInput">Nombres</span>
-                <label forHtml="first_name" className="required w-100">
+                <label className="required w-100">
                   <input
                     type="text"
                     className="form-control"
@@ -42,7 +42,7 @@ export default function UserData() {
             <div className="col-lg-6">
               <div className="form-group py-2 mb-0">
                 <span className="labelInput">Apellidos</span>
-                <label forHtml="last_name" className="required w-100">
+                <label className="required w-100">
                   <input
                     type="text"
                     className="form-control"
@@ -57,7 +57,7 @@ export default function UserData() {
             <div className="clearfix"></div>
             <div className="col-lg-8">
               <span className="labelInput">Correo</span>
-              <label forHtml="email" className="required w-100">
+              <label className="required w-100">
                 <MailIcon />
                 <input
                   type="email"
@@ -80,7 +80,7 @@ export default function UserData() {
               name="upImage"
               id="upImage"
             />
-            <label forHtml="upImage">
+            <label>
               <CameraAltIcon />
             </label>
             <img id="previewImage" src={previewImage} alt="your image" />
@@ -91,7 +91,7 @@ export default function UserData() {
         <div className="col-12 col-lg-6">
           <div className="form-group py-2 mb-0">
             <span className="labelInput">Confirma el correo</span>
-            <label forHtml="email_confirm" className="required w-100">
+            <label className="required w-100">
               <MailIcon />
               <input
                 type="email"
@@ -107,7 +107,7 @@ export default function UserData() {
         <div className="col-12 col-lg-6">
           <div className="form-group py-2 mb-0">
             <span className="labelInput">Usuario</span>
-            <label forHtml="username" className="required w-100">
+            <label className="required w-100">
               <img src={UserIcon} alt="" />
               <input
                 type="text"
@@ -122,10 +122,51 @@ export default function UserData() {
         </div>
       </div>
       <div className="form-row align-items-center">
+        <div className="col-lg-4">
+          <div className="form-group py-2 mb-0">
+            <span className="labelInput">Pais</span>
+            <label className="required w-100">
+              <input
+                type="text"
+                className="form-control"
+                id="ubication_country"
+                name="ubication_country"
+              />
+            </label>
+          </div>
+        </div>
+        <div className="col-lg-4">
+          <div className="form-group py-2 mb-0">
+            <span className="labelInput">Ciudad</span>
+            <label className="required w-100">
+              <input
+                type="text"
+                className="form-control"
+                id="ubication_city"
+                name="ubication_city"
+              />
+            </label>
+          </div>
+        </div>
+        <div className="col-lg-4">
+          <div className="form-group py-2 mb-0">
+            <span className="labelInput">Region</span>
+            <label className="required w-100">
+              <input
+                type="text"
+                className="form-control"
+                id="ubication_region"
+                name="ubication_region"
+              />
+            </label>
+          </div>
+        </div>
+      </div>
+      <div className="form-row align-items-center">
         <div className="col-12">
           <div className="form-group py-2 mb-0">
             <span className="labelInput">Ubicacion actual</span>
-            <label forHtml="ubication" className="required w-100">
+            <label className="required w-100">
               <SearchIcon />
               <input
                 type="email"
@@ -140,13 +181,11 @@ export default function UserData() {
       </div>
       <div className="form-group">
         <span className="labelInput">Sobre mi</span>
-        <label forHtml="about_me" className="w-100">
+        <label className="w-100">
           <textarea
             name="about_me"
             id="about_me"
-            name="about_me"
             aria-describedby="about_me"
-            cols="50"
             className="w-100 form-control"
             placeholder="Cuéntanos más sobre ti para que toda la comunidad te conozca."></textarea>
           <span className="small">160 caracteres máximo</span>
@@ -156,7 +195,7 @@ export default function UserData() {
         <div className="col-12 col-lg-6">
           <div className="form-group">
             <span className="labelInput">Sitio web o blog</span>
-            <label forHtml="web_site" className="w-100">
+            <label className="w-100">
               <LanguageIcon />
               <input
                 type="url"
@@ -172,7 +211,7 @@ export default function UserData() {
         <div className="col-12 col-lg-6">
           <div className="form-group updatePhone">
             <span className="d-block labelInput">Teléfono</span>
-            <label forHtml="phone" className="w-100">
+            <label className="w-100">
               <PhoneIcon />
               <input
                 type="tel"
@@ -190,7 +229,7 @@ export default function UserData() {
         <div className="col-12 col-lg-4">
           <div className="form-group">
             <span className="d-block labelInput">Facebook</span>
-            <label forHtml="facebook" className="w-100">
+            <label className="w-100">
               <FacebookIcon />
               <input
                 type="tel"
@@ -205,7 +244,7 @@ export default function UserData() {
         <div className="col-12 col-lg-4">
           <div className="form-group">
             <span className="d-block labelInput">Instagram</span>
-            <label forHtml="instagram" className="w-100">
+            <label className="w-100">
               <InstagramIcon/>
               <input
                 type="tel"
@@ -220,7 +259,7 @@ export default function UserData() {
         <div className="col-12 col-lg-4">
           <div className="form-group">
             <span className="d-block labelInput">Twitter</span>
-            <label forHtml="twitter" className="w-100">
+            <label className="w-100">
               <TwitterIcon/>
               <input
                 type="tel"

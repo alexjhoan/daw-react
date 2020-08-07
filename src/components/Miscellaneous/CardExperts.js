@@ -67,6 +67,7 @@ export function CardListExperts(props:any){
   const DatalistExpertImp = props.DatalistExpert.map((a:any, i:any) => {
     return(
       <CardExpert
+        key={i}
         typePublication={a.style}
         title={a.title}
         galleries={a.galleries[0] || ""}

@@ -12,19 +12,19 @@ export default function PublicationsCreate(props: any) {
       <p>¿Qué tipo de publicación deseas realizar?</p>
       <div className="formBox">
         <div className="imgBoxForm">
-          <Button id="createArticle" className="btnPublicationCreate">
+          <Button id="createArticle" className="btnPublicationCreate" onClick={props.btnArticle}>
             <img src={ImgArticle} alt="microphone" />
           </Button>
           <p>Articulo</p>
         </div>
         <div className="imgBoxForm">
-          <Button id="createVideo" className="btnPublicationCreate">
+          <Button id="createVideo" className="btnPublicationCreate" onClick={props.btnVideo}>
             <img src={ImgVideo} alt="microphone" />
           </Button>
           <p>Video</p>
         </div>
         <div className="imgBoxForm">
-          <Button id="createPodcast" className="btnPublicationCreate">
+          <Button id="createPodcast" className="btnPublicationCreate" onClick={props.btnPodcast}>
             <img src={ImgPodcast} alt="microphone" />
           </Button>
           <p>Podcast</p>
