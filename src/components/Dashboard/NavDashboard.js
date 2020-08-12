@@ -72,7 +72,7 @@ export default function NavDashboard() {
 
                 <figure>
                   <svg id="gusta" xmlns="http://www.w3.org/2000/svg" width="28.528" height="25.174" viewBox="0 0 28.528 25.174">
-                    <path className="a" d="M26.272,2.305a7.665,7.665,0,0,0-10.91,0L14.289,3.379,13.216,2.305a7.715,7.715,0,0,0-10.91,10.91L14.289,25.2,26.272,13.216a7.665,7.665,0,0,0,0-10.91" transform="translate(-0.025 -0.025)" fill="#808080" fill-rule="evenodd"></path>
+                    <path className="a" d="M26.272,2.305a7.665,7.665,0,0,0-10.91,0L14.289,3.379,13.216,2.305a7.715,7.715,0,0,0-10.91,10.91L14.289,25.2,26.272,13.216a7.665,7.665,0,0,0,0-10.91" transform="translate(-0.025 -0.025)" fill="#808080" fillRule="evenodd"></path>
                   </svg>
                 </figure>
                 Favoritos

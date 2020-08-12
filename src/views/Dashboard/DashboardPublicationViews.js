@@ -11,6 +11,7 @@ import AddIcon from "@material-ui/icons/Add"
 
 export default function DashboardPublicationsViews(props: any) {
   const [modalShow, setModalShow] = React.useState(false)
+  const [componentCreateModal, setComponentCreateModal] = React.useState(true)
   const [componentArticle, setComponentArticle] = React.useState(false)
   const [componentVideo, setComponentVideo] = React.useState(false)
   const [componentPodcast, setComponentPodcast] = React.useState(false)
@@ -24,19 +25,29 @@ export default function DashboardPublicationsViews(props: any) {
     }, 300)
   }
 
+  const handleBtnBack = () => {
+    setComponentCreateModal(true)
+    setComponentArticle(false)
+    setComponentVideo(false)
+    setComponentPodcast(false)
+  }
+
   const handleBtnArticle = () => {
+    setComponentCreateModal(false)
     setComponentArticle(true)
     setComponentVideo(false)
     setComponentPodcast(false)
   }
 
   const handleBtnVideo = () => {
+    setComponentCreateModal(false)
     setComponentArticle(false)
     setComponentVideo(true)
     setComponentPodcast(false)
   }
 
   const handleBtnPodcast = () => {
+    setComponentCreateModal(false)
     setComponentArticle(false)
     setComponentVideo(false)
     setComponentPodcast(true)
@@ -50,8 +61,14 @@ export default function DashboardPublicationsViews(props: any) {
     />
   )
 
-  if (componentArticle === true) {
-    renderComponent = <CreateArticle />
+  if (componentCreateModal === true) {
+    renderComponent = <PublicationsCreate
+      btnArticle={handleBtnArticle}
+      btnVideo={handleBtnVideo}
+      btnPodcast={handleBtnPodcast}
+    />
+  } else if (componentArticle === true) {
+    renderComponent = <CreateArticle handleBtnBack={handleBtnBack}/>
   } else if (componentVideo === true) {
     renderComponent = <CreateVideo />
   } else if (componentPodcast === true) {
