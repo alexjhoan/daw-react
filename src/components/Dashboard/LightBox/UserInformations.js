@@ -21,7 +21,7 @@ export default function PublicationsCreate(props: any) {
         <Col sm={9}>
           <Tab.Content>
             <Tab.Pane eventKey="first">
-               <UserData />
+               <UserData fetchInfoUser={props.fetchInfoUser} />
             </Tab.Pane>
             <Tab.Pane eventKey="second">
               <UserInterests />
@@ -32,4 +32,3 @@ export default function PublicationsCreate(props: any) {
     </Tab.Container>
   )
 }
-

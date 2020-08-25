@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import {createStyles, fade, Theme, makeStyles} from "@material-ui/core/styles"
 import Headroom from "react-headroom"
 import Button from '@material-ui/core/Button';
@@ -11,7 +12,8 @@ import {
   Toolbar,
   IconButton,
   Typography,
-  InputBase
+  InputBase,
+  Avatar
 } from "@material-ui/core"
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -79,6 +81,24 @@ const useStyles = makeStyles((theme: Theme) =>
 )
 
 export default function MainHead(props:any) {
+  const userLogged = localStorage.getItem('token')
+  const localStg = JSON.parse(localStorage.getItem("itemsLocal") || "{}")
+
+  let userImg: any
+  let userAvatar: any
+
+    if ( !userLogged ) {
+      userAvatar = <Avatar onClick={props.openDialog} alt="Usuario" className="mb-0" src={user} />
+    } else {
+      if (localStg) {
+        if (localStg.picture) {
+          userImg = localStg.picture
+          userAvatar = <Avatar alt="Usuario" className="mb-0" src={userImg} />
+        } else {
+          userAvatar = <Avatar alt="Usuario" className="mb-0" src={user} />
+        }
+      }
+    }
   const classes = useStyles()
   return (
     <Headroom className="header">
@@ -86,12 +106,7 @@ export default function MainHead(props:any) {
         <AppBar position="static" className={classes.barRoot}>
           <Toolbar>
             <div className="logo-text d-flex justify-content-center align-items-center">
-              <img src={logo} className="img-fluid" />
-              <Typography variant="body1" noWrap>
-                DREAM<span className="textYellow">AWAY</span>
-                <br />
-                <span>TRAVEL</span>
-              </Typography>
+              <Link to="/"><img src={logo} className="img-fluid" /></Link>
             </div>
             <div className="right-menu">
               <div className={classes.search}>
@@ -107,7 +122,7 @@ export default function MainHead(props:any) {
                   inputProps={{"aria-label": "search"}}
                 />
               </div>
-              <Button onClick={props.openDialog} className="nav-profile" style={{backgroundImage: "url(" + user + ")"}}></Button>
+              {userAvatar}
               <IconButton
                 edge="start"
                 className={classes.menuButton}

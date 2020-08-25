@@ -11,11 +11,48 @@ import IconFacebook from '../../assets/images/icons/i_facebook.svg'
 import IconTwitter from '../../assets/images/icons/i_twitter.svg'
 import IconMail from '../../assets/images/icons/i_mail.svg'
 import IconPhone from '../../assets/images/icons/i_phone.svg'
+import CircularProgress from '@material-ui/core/CircularProgress';
+import { Theme, createStyles, makeStyles } from '@material-ui/core/styles';
 import '../Styles/Dashboard/AboutMe.css'
+//Service
+import { getUser } from '../../services/UserService';
+import { getRegion } from '../../services/LocationService';
+
+//redux
+import { useDispatch, useSelector } from 'react-redux';
+import { getUserSuccess, getUsername } from '../../redux/Actions/UsersActions';
+import { RootState } from '../../redux/store';
+import { showDialogEdit, dismissDialogEdit } from '../../redux/Actions/DialogActions'
+import { getRegions } from '../../redux/Actions/LocationsActions'
+
+import {LightBox} from '../../components/Miscellaneous/LightBox'
+import UserInformations from '../../components/Dashboard/LightBox/UserInformations'
+
+
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    progress: {
+        display: 'flex',
+        justifyContent: 'center',
+        marginTop: '2rem',
+        marginBottom: '2rem',
+
+    },
+    circular:{
+      color: '#fbbb00',
+    }
+  }),
+);
 
 export default function AboutMe() {
-
+  const classes= useStyles();
+  const dispatch = useDispatch();
+  const user= useSelector((state:RootState)=> state.user)
+  const [loading, setLoading] = useState(true);
+  const editModal= useSelector((state:RootState)=> state.dialog)
   // const [data, setData] = useState({ hits: [] });
+  const city = user.city ? user.city.name: '';
+  const country = user.country ? user.country.name:'';
 
   // useEffect(async () => {
   //   axios.get(
@@ -30,17 +67,37 @@ export default function AboutMe() {
   //   })
   // })
 
+  async function fetchInfoUser(){
+    getUser(localStorage.getItem('username'), dispatch)
+    setLoading(false)
+  }
+  async function fetchRegion() {
+    getRegion().then(response=>{
+      dispatch(getRegions(response.results? response.results: []));
+
+    })
+  }
+
+  useEffect(() => {
+    fetchInfoUser();
+    fetchRegion();
+    },[]);
+
+
+
+
   const dataPublication = DataMagazine[0]
   const dataExperts = DataExperts[0]
 
   return (
     <React.Fragment>
+      {!loading &&<div>
       <div className="row">
         <div className="col-12 col-sm-6 col-md-4 text-white">
           <div id="text_about_me">
             <p className="title">sobre mí</p>
             <p>
-              Amante de la adrenalina, me gustan las actividades de alto riesgo, en especial el paracaidismo
+              {user.about_me}
             </p>
             <div className="address d-flex flex-row align-items-center text-uppercase">
               <figure className="mb-0 mr-2">
@@ -50,7 +107,7 @@ export default function AboutMe() {
                   </g>
                 </svg>
               </figure>
-              Desconocido
+              {`${city} ${country}`}
             </div>
           </div>
         </div>
@@ -60,20 +117,20 @@ export default function AboutMe() {
               <div className="left">
                 <p className="title">experto</p>
                 <p>
-                  Especialista en paracaidismo libre..
+                  {user.expert}
                 </p>
               </div>
               <div className="right">
                 <p className="title">intereses</p>
                 <p>
-                  escalar, deportes extremos, buceo
+                {user.interests}
                 </p>
               </div>
             </div>
             <div className="data_down">
               <p className="title">mi web o blog</p>
-              <a href="http://www.usertest.com" target="_blank">
-                <img src={IconWorld} alt="world" width="25" /> http://www.usertest.com</a>
+              <a href={user.web_site} target="_blank">
+                <img src={IconWorld} alt="world" width="25" /> {user.web_site}</a>
             </div>
           </div>
         </div>
@@ -120,31 +177,31 @@ export default function AboutMe() {
               <p className="text-uppercase text_gray mb-3">email</p>
               <a href="mailto:proyectosjenni@gmail.com" target="_blank">
                 <img src={IconMail} alt="mail" />
-                user_test@gmail.com
+                {user.email}
               </a>
             </div>
             <div className="item_contact_list">
               <p className="text-uppercase text_gray mb-3">teléfonos</p>
               <a href="tel:5468215132" target="_blank">
                 <img src={IconPhone} alt="phone" />
-                +584125008896
+                {user.phone}
               </a>
             </div>
             <div className="item_contact_list">
               <p className="text-uppercase text_gray mb-3">redes sociales</p>
               <ul className="d-flex flex-row align-items-center justify-content-start">
                 <li>
-                  <a href="https://twitter.com/" target="_blank">
+                  <a href={user.twitter} target="_blank">
                     <img src={IconTwitter} alt="twitter" />
                   </a>
                 </li>
                 <li>
-                  <a href="https://instagram.com/" target="_blank">
+                  <a href={`https://${user.instagram}`} target="_blank">
                     <img src={IconInstagram} alt="instagram" />
                   </a>
                 </li>
                 <li>
-                  <a href="https://facebook.com/" target="_blank">
+                  <a href={user.facebook} target="_blank">
                     <img src={IconFacebook} alt="facebook" />
                   </a>
                 </li>
@@ -153,6 +210,19 @@ export default function AboutMe() {
           </div>
         </div>
       </div>
+      </div>}
+      {loading &&
+      <div className={classes.progress}>
+            <CircularProgress className={classes.circular} size={68} />
+      </div>}
+
+      <LightBox
+        show={editModal.openEdit}
+        onHide={() => dispatch(dismissDialogEdit())}
+        children={
+          <UserInformations fetchInfoUser={fetchInfoUser}/>
+        }
+      />
     </React.Fragment>
   )
 }

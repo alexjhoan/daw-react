@@ -112,3 +112,10 @@ a.img_carousel:hover ~ .bg_img_carousel:after {
   fill: var(--daw-yellow);
   cursor: pointer;
 }
+
+@media (max-width:574px) {
+  .item-slider {
+    border-right: solid 10px #fff;
+    border-left: solid 10px #fff;
+  }
+}

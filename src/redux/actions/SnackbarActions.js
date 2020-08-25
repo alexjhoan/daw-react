@@ -8,7 +8,7 @@ export const showSuccessSnackBar = (response: string ) => {
     type: SHOW_SUCCESS_SNACKBAR,
     payload:{
       open: true,
-      duration: 1400,
+      duration: 5000,
       snackbarMessage: response,
     }
   };
@@ -26,9 +26,8 @@ export const showErrorSnackBar = (response: any) => {
       type: SHOW_ERROR_SNACKBAR,
       payload: {
         open: true,
-        duration: 2000,
+        duration: 4000,
         snackbarMessage: 'Revise su conexión a internet',
-        styles: { backgroundColor: 'red' }
       },
     }
   };
@@ -39,7 +38,7 @@ export const showErrorSnackBar = (response: any) => {
           type: SHOW_ERROR_SNACKBAR,
           payload: {
             open: true,
-            duration: 2000,
+            duration: 4000,
             snackbarMessage: response[entry][key],
           },
         };
@@ -49,7 +48,7 @@ export const showErrorSnackBar = (response: any) => {
         type: SHOW_ERROR_SNACKBAR,
         payload: {
           open: true,
-          duration: 2000,
+          duration: 4000,
           snackbarMessage: response[entry],
         },
       };

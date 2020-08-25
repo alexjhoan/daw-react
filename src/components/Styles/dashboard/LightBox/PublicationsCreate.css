@@ -32,8 +32,6 @@
     margin-bottom: 1vh;
 }
 
-
-
 form.addForm {
   width: 100%;
   min-height: 88vh;
@@ -43,7 +41,6 @@ form.addForm {
 .addForm textarea {
   box-shadow: none;
   border: 1px solid #bbbbbb;
-  height: 47px;
 }
 .addForm textarea {
   padding: 15px;
@@ -56,11 +53,12 @@ form.addForm {
 .addForm .inputAuthors img {
   position: absolute;
   background: #f4c811;
-  padding: 10px;
-  border-radius: 5px 22px 22px 5px;
-  top: 0px;
+  padding: 7px 13px 8px;
+  border-radius: 5px 0 0 5px;
+  top: 7px;
   left: 0px;
-  width: 45px;
+  width: 52px;
+  z-index: 1;
 }
 
 .form-group {
@@ -253,6 +251,10 @@ form.addForm textarea#containPublicationPodcast{
   justify-content: space-between;
 }
 
+.addForm .selectCategory > div{
+  width: 60%;
+}
+
 .addForm .selectCategory select {
   width: 55%;
 }
@@ -262,6 +264,12 @@ form.addForm textarea#containPublicationPodcast{
   border: solid 1px #bbb;
   border-radius: 4px;
   min-height: 27vh;
+}
+
+.addForm .submitArticle{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 /*---------------------bullets-Form---------------------*/

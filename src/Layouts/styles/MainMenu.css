@@ -11,6 +11,12 @@
 header {
   box-shadow: none !important;
 }
+header .MuiAvatar-root {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  cursor: pointer;
+}
 .MuiToolbar-root {
   justify-content: space-between;
 }
@@ -31,19 +37,7 @@ header {
   align-items: center;
 }
 .logo-text img {
-  margin-right: 10px;
-}
-.logo-text p {
-  color: #332f30;
-  font-family: "Open Sans Condensed", sans-serif;
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 0.9;
-  margin-bottom: 0;
-}
-.logo-text p span:last-child {
-  font-weight: 700;
-  font-size: 1.9em;
+  width: 130px;
 }
 .textYellow {
   color: #f4c811;
@@ -66,22 +60,9 @@ header {
   width: 18px;
 }
 .header button.MuiButtonBase-root {
-    margin-right: 0;
+  margin-right: 0;
 }
-#menuUserLogout {
-  position: fixed;
-  right: -15px;
-  top: 0;
-  border-top-left-radius: 15px;
-  padding: 0;
-  min-height: 50vh;
-  max-height: 100vh;
-  overflow-y: scroll;
-  background: #f6f5f5;
-  min-width: 250px;
-  z-index: 1500;
-  padding-top: 30px;
-}
+
 button.nav-profile {
   border-radius: 100%;
   min-width: 25px;
@@ -95,12 +76,19 @@ button.nav-profile {
   background-repeat: no-repeat;
   text-align: center;
   line-height: 35px;
-  margin-right: 12px!important;
+  margin-right: 12px !important;
   border: none;
   background-color: transparent;
 }
-.makeStyles-searchIcon-5:hover{
+.makeStyles-searchIcon-5:hover {
   cursor: pointer;
+}
+.header button.MuiIconButton-root span.MuiIconButton-label svg {
+  font-size: 2rem;
+}
+button.close.closeDrawerNav {
+  box-shadow: none !important;
+  border: 0 !important;
 }
 .right-menu .accordion button {
   background: transparent !important;
@@ -129,6 +117,9 @@ button.nav-profile {
 }
 button:focus {
   outline: none !important;
+}
+.top_profile .DawBtn {
+    font-size: 1rem!important;
 }
 nav button.border-0.navbar-toggler {
   transition: all 0.2s ease-in-out;
@@ -200,15 +191,13 @@ a.btn:hover svg {
 }
 .linksMenu {
   padding: 10px;
+  width: 240px;
 }
-.linksMenu a figure {
+.linksMenu a img,
+.linksMenu button img {
   margin-bottom: 0;
   margin-right: 10px;
   width: 25px;
-}
-.linksMenu a figure,
-.linksMenu a figure img {
-  margin-bottom: 0;
 }
 
 .linksMenu a {
@@ -228,10 +217,12 @@ a.btn:hover svg {
 }
 .MuiPaper-root.MuiDrawer-paper.MuiDrawer-paper {
   border-top-left-radius: 15px;
+  background: #f6f5f5;
 }
-.MuiAvatar-img {
+.avatarNoLogged .MuiAvatar-img {
   height: auto !important;
-  width: 30px !important;
+  width: 28px !important;
+  margin-bottom: 5px;
 }
 .MuiAvatar-root {
   margin-bottom: 10px !important;
@@ -265,12 +256,109 @@ a.btn:hover svg {
 .footer_nav ul li:not(:last-child) {
   margin-right: 10px;
 }
+
+.top_profileLogged {
+    align-items: center;
+    display: flex;
+}
+.top_profileLogged > div {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+  line-height: 1;
+  color: #fff;
+}
+
+.top_profileLogged .MuiAvatar-root {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  width: 60px;
+  height: 60px;
+}
+
+.top_profileLogged address {
+  margin-bottom: 0;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+}
+
+.top_profileLogged p {
+  margin-bottom: 0;
+}
 @media (min-width: 992px) {
   .navbar-custom {
     padding: 0.5rem 60px !important;
   }
 }
 
+/*-------------------LoggedNav----------------------*/
+.MuiPaper-root.MuiDrawer-paper {
+    overflow-x: hidden;
+}
+.linksMenu p.MuiTypography-root {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    line-height: 1;
+}
+.linksMenu p.MuiTypography-root img {
+    display: inline;
+    margin-bottom: 0;
+    margin-right: 10px;
+}
+.linksMenu .MuiPaper-root {
+    box-shadow: none;
+    margin: 0!important;
+    background: transparent;
+}
+.linksMenu .MuiAccordionSummary-root.Mui-expanded {
+    min-height: auto;
+    border-color: #f4c811!important;
+    background: #e6e6e6;
+}
+.linksMenu .MuiAccordionSummary-root .MuiAccordionSummary-content {
+    margin: 0;
+}
+.linksMenu .MuiAccordionSummary-root {
+    padding: 0;
+}
+.linksMenu .MuiAccordionDetails-root {
+    flex-direction: column;
+}
+.linksMenu .MuiAccordion-root:before {
+    background: transparent;
+}
+.linksMenu button {
+    border: 0;
+    background: transparent;
+    width: 100%;
+    padding: 10px 0 10px 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.divider {
+  width: 100%;
+  height: 1px;
+  position: relative;
+  background: #ced4da;
+  margin: 15px 0;
+}
+.top_profileLogged + .linksMenu {
+  padding: 0;
+}
+.top_profileLogged + .linksMenu .MuiPaper-root a {
+    padding-left: 0;
+}
+.top_profileLogged + .linksMenu a {
+    padding-left: 10px;
+}
+.top_profileLogged + .linksMenu .MuiAccordionSummary-root {
+    padding-left: 6px;
+    border-left: 4px solid transparent;
+}
 /*--------------------Login----------------------*/
 
 button.close {
@@ -279,8 +367,8 @@ button.close {
   right: 15px;
   top: 0px;
   opacity: 1;
-  border: solid 1px var(--daw-darkGray)!important;
-  box-shadow: 1px 1px 5px var(--daw-darkGray)!important;
+  border: solid 1px var(--daw-darkGray) !important;
+  box-shadow: 1px 1px 5px var(--daw-darkGray) !important;
 }
 
 button.MuiButtonBase-root.MuiButton-root.MuiButton-text.close {
@@ -292,20 +380,21 @@ button.MuiButtonBase-root.MuiButton-root.MuiButton-text.close {
   min-width: 25px;
 }
 
-button.MuiButtonBase-root.MuiButton-root.MuiButton-text.close span{
+button.MuiButtonBase-root.MuiButton-root.MuiButton-text.close span {
   font-size: 2.5rem;
 }
 
-.MuiPaper-root.MuiDialog-paper.MuiDialog-paperScrollPaper.MuiDialog-paperWidthSm.MuiPaper-elevation24.MuiPaper-rounded {
-    background-color: transparent!important;
-    padding: 15px 30px 0;
-    box-shadow: none!important;
+.MuiPaper-root.MuiDialog-paper.MuiDialog-paperScrollBody.MuiDialog-paperWidthSm.MuiPaper-elevation24.MuiPaper-rounded {
+  background-color: transparent !important;
+  padding: 15px 30px 0;
+  box-shadow: none !important;
 }
 
-.MuiDialog-paper{
-  margin:0!important;
+.MuiDialog-paper {
+  margin: 0 !important;
 }
 
 div#nav-tabContent {
-    padding: 20px 30px!important;
+  padding: 20px 30px !important;
 }
+

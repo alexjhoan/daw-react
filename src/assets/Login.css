@@ -1,6 +1,6 @@
 .body-modal-inter {
   padding-top: 60px;
-  background-color: #0000001a;
+  background-color: #fff;
   min-height: 100vh;
   padding-bottom: 80px;
 }
@@ -70,6 +70,10 @@
 .logo-text-lightbox p span:last-child {
   font-weight: 700;
   font-size: 1.9em;
+}
+
+.logo-text-lightbox img{
+  max-width: 70%;
 }
 
 span.separator {
@@ -149,12 +153,6 @@ form label i.far.fa-eye {
   color: #f4c811;
 }
 
-form label input:not([type="submit"]) {
-  border-radius: 5px;
-  padding: 10px 10px;
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
-  font-size: 20px;
-}
 form label i + input:not([type="submit"]) {
   padding: 10px 40px;
 }
@@ -347,17 +345,23 @@ input#id_email {
 
 .body-modal-inter form.formRestore input {
   border: none;
-  border-bottom: solid 2px var(--daw-gray);
   border-radius: 5px;
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
-  padding-left: 37px;
 }
 
 .body-modal-inter form.formRestore label svg {
   transform: translate(7px, 39px);
 }
 
-.closeModal button.close span {
+button.closePassword {
+  position: absolute;
+  z-index: 5;
+  right: 15px;
+  top: 0px;
+  border: none;
+  background: transparent;
+}
+
+.closeModal button.closePassword span {
   font-size: 2.6em;
   margin-right: 23px;
   font-weight: 400;

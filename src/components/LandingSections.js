@@ -19,7 +19,7 @@ export default function LandingSections(props: any) {
         </Col>
       </Row>
       <Row className="m-0">
-        <Col className="px-5">
+        <Col className="px-2 px-lg-5">
           {props.children}
         </Col>
       </Row>

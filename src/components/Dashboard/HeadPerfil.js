@@ -5,6 +5,8 @@ import UserTraveler from '../../assets/images/icons/i_travelerWhite.svg'
 import IconConfiguration from '../../assets/images/icons/i_configuration_white.svg'
 import IconShared from '../../assets/images/icons/i_share_white.svg'
 import '../Styles/Dashboard/HeadPerfil.css'
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from '../../redux/store';
 
 const localStg = JSON.parse(localStorage.getItem("itemsLocal") || "{}")
 
@@ -31,6 +33,8 @@ const localStg = JSON.parse(localStorage.getItem("itemsLocal") || "{}")
   }
 
 export default function HeadPerfil() {
+  const user= useSelector((state:RootState)=> state.user)
+
   return (
     <div className="container-fluid" id="head-perfil">
       <div className="row">
@@ -39,7 +43,8 @@ export default function HeadPerfil() {
             <div className="image_profile" style={userImg}></div>
               <div className="grid_data_user d-flex flex-column justify-content-between align-items-start">
                 <div className="data_user">
-                  <p className="name_user">{localStg.username}</p>
+                  <p className="name_user">{user.first_name} {user.last_name}</p>
+                  <p className="name_user">(@{user.username})</p>
                   <div className="role_user d-flex flex-row align-items-center">
                     {imgGroups}
                   </div>

@@ -12,7 +12,7 @@ export function CarouselExperts() {
     return(
       <Slide index={i} key={i}>
         <CardExpert
-          avatar={a.avatar || ""}
+          // avatar={a.avatar || ""}
           typePublication={a.style}
           galleries={a.galleries[0]}
           authors={a.authors}

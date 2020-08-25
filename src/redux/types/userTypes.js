@@ -6,25 +6,25 @@ export const INFO_USER = 'INFO_USER';
 
 export interface Users {
    users: {
-    username: string
-    lastname: string
+    username: string,
+    lastname: string,
     email:  string
     }
 }
 
 export interface User{
-    id: string
-    name: string
-    lastName: string
-    email:  string
-    username:  string
-    phone: string
-    country: string
-    city: string
-    region: string
-    facebook: string
-    instagram: string
-    twitter: string
+    id: string,
+    name: string,
+    lastName: string,
+    email:  string,
+    username:  string,
+    phone: string,
+    country: string,
+    city: string,
+    region: string,
+    facebook: string,
+    instagram: string,
+    twitter: string,
     webSite: string
 }
 

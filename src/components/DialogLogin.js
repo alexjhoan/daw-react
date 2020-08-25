@@ -18,6 +18,7 @@ export default function Modal(props: any) {
         onClose={props.closeDialog}
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
+        scroll={'body'}
       >
         <Button
           onClick={props.closeDialog}
@@ -55,7 +56,7 @@ export default function Modal(props: any) {
                 id="nav-signup"
                 role="tabpanel"
                 aria-labelledby="nav-signup-tab">
-                <p className="text-center mb-0">Con tus redes sociales</p>
+                {/*<p className="text-center mb-0">Con tus redes sociales</p>
                 <span className="separator mx-auto w-100 text-center d-block">
                   o
                 </span>
@@ -70,14 +71,14 @@ export default function Modal(props: any) {
                       <img src={IconFacebook} alt="" width="20" /> Facebook
                     </button>
                   </a>
-                </div>
+                </div>*/}
                 <RegisterForm />
               </Tab.Pane>
               <Tab.Pane
                 eventKey="login"
                 className="tab-pane fade"
                 id="nav-login">
-                <p className="text-center mb-0">Con tus redes sociales</p>
+                {/*<p className="text-center mb-0">Con tus redes sociales</p>
                 <span className="separator mx-auto w-100 text-center d-block">
                   o
                 </span>
@@ -92,7 +93,7 @@ export default function Modal(props: any) {
                       <img src={IconFacebook} alt="" width="20" /> Facebook
                     </button>
                   </a>
-                </div>
+                </div>*/}
                 <LoginForm />
               </Tab.Pane>
             </Tab.Content>

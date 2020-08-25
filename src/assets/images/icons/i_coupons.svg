@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="14.465" viewBox="0 0 18 14.465">
+  <g id="tarjeta_de_regalo" data-name="tarjeta de regalo" transform="translate(0)">
+    <path id="Trazado_293" data-name="Trazado 293" d="M138.637,185.358V186a3.832,3.832,0,0,1-2.661-1.07v3.717h10.608a.964.964,0,0,0,.964-.964v-3.215H136.423A3.194,3.194,0,0,0,138.637,185.358Zm6.661,1.361h.643v.643H145.3Zm-1.286,0h.643v.643h-.643Zm-1.286,0h.643v.643h-.643Zm-1.286,0h.643v.643h-.643Zm0,0" transform="translate(-130.512 -177.076)" fill="gray"/>
+    <path id="Trazado_294" data-name="Trazado 294" d="M64.77,112.469a.735.735,0,0,0-.27,1.414l1.581.635-.633-1.59A.727.727,0,0,0,64.77,112.469Zm0,0" transform="translate(-61.47 -107.969)" fill="gray"/>
+    <path id="Trazado_295" data-name="Trazado 295" d="M234.088,306.635a.851.851,0,0,0,1.138-.4l.839-1.762h-6.49Zm0,0" transform="translate(-220.349 -292.254)" fill="gray"/>
+    <path id="Trazado_296" data-name="Trazado 296" d="M23.977,65.433v3.215H26.4L25.8,68.41a1.376,1.376,0,1,1,1.784-1.79l.246.618v-2.77H24.941a.964.964,0,0,0-.964.964Zm0,0" transform="translate(-23.013 -61.897)" fill="gray"/>
+    <path id="Trazado_297" data-name="Trazado 297" d="M62.5.56a.851.851,0,0,0-1.138.4L60.672,2.4H66.34Zm0,0" transform="translate(-58.234 -0.476)" fill="gray"/>
+    <path id="Trazado_298" data-name="Trazado 298" d="M25.262,185.358a3.2,3.2,0,0,0,2.215-.889h-3.5v3.215a.964.964,0,0,0,.964.964h2.893v-3.636a3.83,3.83,0,0,1-2.572.989Zm0,0" transform="translate(-23.013 -177.076)" fill="gray"/>
+    <path id="Trazado_299" data-name="Trazado 299" d="M.319,160.71v-1.538l-.237.5A.861.861,0,0,0,.319,160.71Zm0,0" transform="translate(0.002 -152.795)" fill="gray"/>
+    <path id="Trazado_300" data-name="Trazado 300" d="M439.977,163.484v1.538l.237-.5A.86.86,0,0,0,439.977,163.484Zm0,0" transform="translate(-422.298 -156.934)" fill="gray"/>
+    <path id="Trazado_301" data-name="Trazado 301" d="M146.585,64.469H135.977v2.994l.336-.843a1.374,1.374,0,1,1,1.786,1.79l-.594.238H147.55V65.433a.964.964,0,0,0-.964-.964Zm-4.5,2.25h-.643V65.433h.643Zm1.286,0h-.643V65.433h.643Zm1.286,0h-.643V65.433h.643Zm1.286,0H145.3V65.433h.643Zm0,0" transform="translate(-130.513 -61.897)" fill="gray"/>
+    <path id="Trazado_302" data-name="Trazado 302" d="M145.473,113.2a.729.729,0,0,0-1.407-.273l-.633,1.59,1.581-.636a.73.73,0,0,0,.459-.681Zm0,0" transform="translate(-137.67 -107.966)" fill="gray"/>
+  </g>
+</svg>

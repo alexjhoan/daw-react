@@ -11,6 +11,10 @@ import SwiperCore, {Navigation, Pagination, Scrollbar, A11y} from "swiper"
 import Swiper from "react-id-swiper"
 import "swiper/swiper-bundle.min.css"
 import {TagInput} from "reactjs-tag-input"
+import { FancyAutocomplete, FancyTextInput } from '../../FancyComponents'
+//Form-hook
+import {useForm, Controller} from "react-hook-form"
+import * as yup from "yup"
 
 SwiperCore.use([Navigation, Pagination, Scrollbar])
 
@@ -22,6 +26,14 @@ export default function CreateArticle(props) {
   const [miCarousel, setMiCarousel] = React.useState([])
   const [showImgInput, setShowImgInput] = React.useState(IconNotImage)
   const [tags, setTags] = React.useState([])
+  const methods = useForm({
+    // validationSchema: schema
+  });
+  const {handleSubmit, control, watch, errors, register} = methods
+
+  const onSubmit= (publicationData) =>{
+    console.log(publicationData)
+  }
 
   const onTagsChanged = () => {
     setTags({tags})
@@ -118,7 +130,7 @@ export default function CreateArticle(props) {
     width: 50%;
   `
   return (
-    <form className="addForm" id="formPublicationArticle">
+    <form className="addForm" onSubmit={handleSubmit(onSubmit)} id="formPublicationArticle">
       <div className="container-fluid" style={{display: step1}}>
         <div className="row">
           <div className="col-lg-6">
@@ -126,7 +138,7 @@ export default function CreateArticle(props) {
               <label htmlFor="authors">Autor/es</label>
               <div className="inputAuthors">
                 <img src={UserIcon} alt="." />
-                <input
+                <FancyTextInput
                   disabled
                   type="text"
                   className="form-control pl-5"
@@ -156,7 +168,7 @@ export default function CreateArticle(props) {
                 </div>
               </div>
               <div className="custom-file camera">
-                <input
+                <FancyTextInput
                   disabled
                   type="file"
                   className="custom-file-input"
@@ -172,7 +184,7 @@ export default function CreateArticle(props) {
                 </label>
               </div>
               <div className="custom-file onDevice">
-                <input
+                <FancyTextInput
                   type="file"
                   className="custom-file-input"
                   id="upload_fileArticle"
@@ -195,7 +207,7 @@ export default function CreateArticle(props) {
               <label htmlFor="searchMapArticle">Lugar en el mapa</label>
               <div className="inputSearchMap">
                 <img src={IconSearch} alt="" />
-                <input
+                <FancyTextInput
                   type="text"
                   className="form-control"
                   id="searchMapArticle"
@@ -205,7 +217,7 @@ export default function CreateArticle(props) {
             </div>
             <div className="form-group">
               <label htmlFor="titleArticle">Titulo</label>
-              <input
+              <FancyTextInput
                 type="text"
                 className="form-control"
                 id="titleArticle"
@@ -323,7 +335,7 @@ export default function CreateArticle(props) {
                 Si este contenido está en tu blog puedes colocar el enlace aquí
               </small>
               <div className="selectCategory">
-                <input type="text" className="w-60" />
+                <FancyTextInput type="text" />
                 <button className="btn">
                   Añadir Enlace
                 </button>
@@ -332,7 +344,7 @@ export default function CreateArticle(props) {
                 Máximos 2 enlaces
               </small>
               <div className="form-group form-check">
-                <input
+                <FancyTextInput
                   type="checkbox"
                   className="form-check-input"
                   id="aceptConditionArticle"
@@ -367,7 +379,7 @@ export default function CreateArticle(props) {
                       alt=""
                     />
                   </span>
-                  <input
+                  <FancyTextInput
                     type="button"
                     className="btn bg-yellow"
                     defaultValue="Publicar"

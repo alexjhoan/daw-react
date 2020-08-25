@@ -51,6 +51,9 @@ p {
 .w-60 {
   width: 60% !important;
 }
+.w-50 {
+  width: 50% !important;
+}
 .w-30 {
   width: 30% !important;
 }
@@ -82,7 +85,6 @@ a.text_gray:hover {
 }
 
 /*-------------------------Components------------------------*/
-
 .DawBtn,
 button.btn-primary {
   font-family: Roboto;
@@ -93,7 +95,6 @@ button.btn-primary {
   border-radius: 45px;
   font-weight: 300;
   color: #fff;
-  text-transform: uppercase;
   background-color: var(--daw-yellow);
   border: transparent;
   border: none;
@@ -124,32 +125,73 @@ button.btn-primary:not(:disabled):not(.disabled):active
 /*--------------------Medias-Query-------------------*/
 
 @media (max-width: 575px) {
-  .titleCarousel {
-    flex-direction: column;
-    width: 100%;
-  }
-  .titleCarousel p {
-    font-size: 1.5rem;
-  }
   .DawBtn {
     font-size: 1rem;
   }
 }
 
 @media (min-width: 576px) {
+  .w-sm-60 {
+    width: 60% !important;
+  }
+  .w-sm-30 {
+    width: 30% !important;
+  }
+  .w-sm-50 {
+    width: 50% !important;
+  }
+  .w-sm-80 {
+    width: 80% !important;
+  }
 }
 
 @media (min-width: 768px) {
-}
-
-@media (min-width: 992px) {
-  .MuiToolbar-root {
-    margin: 0 60px;
+  .w-md-60 {
+    width: 60% !important;
+  }
+  .w-md-30 {
+    width: 30% !important;
+  }
+  .w-md-50 {
+    width: 50% !important;
   }
   .w-md-80 {
     width: 80% !important;
   }
 }
 
+@media (min-width: 992px) {
+  .MuiToolbar-root {
+    margin: 0 60px;
+  }
+  .w-lg-60 {
+    width: 60% !important;
+  }
+  .w-lg-30 {
+    width: 30% !important;
+  }
+  .w-lg-40 {
+    width: 40% !important;
+  }
+  .w-lg-50 {
+    width: 50% !important;
+  }
+  .w-lg-80 {
+    width: 80% !important;
+  }
+}
+
 @media (min-width: 1200px) {
+  .w-xl-60 {
+    width: 60% !important;
+  }
+  .w-xl-30 {
+    width: 30% !important;
+  }
+  .w-xl-50 {
+    width: 50% !important;
+  }
+  .w-xl-80 {
+    width: 80% !important;
+  }
 }

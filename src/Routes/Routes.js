@@ -7,13 +7,21 @@ import DashboardInformationViews from "../views/Dashboard/DashboardInformationVi
 import DashboardPublicacionsViews from "../views/Dashboard/DashboardPublicationViews"
 import DashboardExperiencesViews from "../views/Dashboard/DashboardExperiencesViews"
 import PasswordRestore from "../views/PasswordRestore"
+import NewPasswordViews from "../views/NewPasswordViews"
+import Help from "../views/Help"
+import PasswordEmail from "../views/PasswordEmail"
+import PasswordSuccess from "../views/PasswordSuccess"
 
 export default function Routes() {
   return (
     <Router>
       <Switch>
         <Route exact path="/" component={Landing} />
-        <PublicRoute exact path="/PasswordRestore" component={PasswordRestore} />
+        <PublicRoute exact path="/passwordrestore" component={PasswordRestore} />
+        <PublicRoute exact path="/change/password/:pin" component={NewPasswordViews} />
+        <PublicRoute exact path="/passwordemail" component={PasswordEmail} />
+        <PublicRoute exact path="/passwordsuccess" component={PasswordSuccess} />
+        <PublicRoute exact path="/help" component={Help} />
         <ProtectedRoute exact path="/dashboard/aboutme" component={DashboardInformationViews} />
         <ProtectedRoute exact path="/dashboard/publications" component={DashboardPublicacionsViews} />
         <ProtectedRoute exact path="/dashboard/experiences" component={DashboardExperiencesViews} />

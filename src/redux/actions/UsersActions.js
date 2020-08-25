@@ -18,11 +18,11 @@ import { GET_USERS_SUCCESS,
     }
   }
 
-  export const getIdUser = (id: any ) =>{
+  export const getUsername = (username: any ) =>{
     return{
       type: INFO_USER,
       payload: {
-        id: id
+        username: username
       }
     }
   }
