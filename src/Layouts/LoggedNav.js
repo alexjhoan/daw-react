@@ -126,7 +126,7 @@ export default function LoggedNav(props: any) {
   const dispatch = useDispatch()
   const history = useHistory()
 
-  const [expanded, setExpanded] = React.useState<string | false>(false)
+  const [expanded, setExpanded] = React.useState(false)
 
   const handleChange = (panel: string) => (
     event: React.ChangeEvent<{}>,
