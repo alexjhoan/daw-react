@@ -115,22 +115,16 @@ export default function AboutMe() {
           <div id="data_about_me">
             <div className="data_up">
               <div className="left">
-                <p className="title">experto</p>
+                <p className="title">Temas</p>
                 <p>
                   {user.expert}
                 </p>
               </div>
               <div className="right">
-                <p className="title">intereses</p>
-                <p>
-                {user.interests}
-                </p>
-              </div>
-            </div>
-            <div className="data_down">
-              <p className="title">mi web o blog</p>
-              <a href={user.web_site} target="_blank">
+                <p className="title">mi web o blog</p>
+                <a href={user.web_site} target="_blank">
                 <img src={IconWorld} alt="world" width="25" /> {user.web_site}</a>
+              </div>
             </div>
           </div>
         </div>

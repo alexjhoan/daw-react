@@ -1,7 +1,8 @@
 import React from 'react'
 import UserDefault from '../../assets/images/icons/user_default.jpg'
-import UserExpert from '../../assets/images/icons/i_expert.svg'
-import UserTraveler from '../../assets/images/icons/i_travelerWhite.svg'
+import UserExpert from '../../assets/images/icons/i_userExpert-white.svg'
+import UserAssociation from '../../assets/images/icons/i_userAssociation-white.svg'
+import UserTraveler from '../../assets/images/icons/i_userTravel-white.svg'
 import IconConfiguration from '../../assets/images/icons/i_configuration_white.svg'
 import IconShared from '../../assets/images/icons/i_share_white.svg'
 import '../Styles/Dashboard/HeadPerfil.css'
@@ -19,10 +20,15 @@ const localStg = JSON.parse(localStorage.getItem("itemsLocal") || "{}")
     } else {
       userImg = {backgroundImage: 'url(' + UserDefault + ')'}
     }
-    if (localStg.groups === "Experto") {
+    if (localStg.groups == "Experto") {
       imgGroups = <figure>
                     <img className="mr-2" src={UserExpert} alt="" />
                     Experto
+                  </figure>
+    }else if (localStg.groups == "Asociacion") {
+      imgGroups = <figure>
+                    <img className="mr-2" src={UserAssociation} alt="" />
+                    Asociación
                   </figure>
     }else {
       imgGroups = <figure>
