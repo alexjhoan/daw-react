@@ -1,8 +1,8 @@
 /*-----------------------User-Information-Nav---------------------*/
 .UserInformations.row {
-  min-height: calc(100vh - 5.6rem);
+  min-height: calc(100vh - 7rem);
   width: 100%;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .UserInformations .colUserNav {

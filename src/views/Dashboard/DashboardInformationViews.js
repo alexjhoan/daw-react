@@ -19,6 +19,7 @@ export default function DashboardInformationViews(props: any) {
         titleChildren="Informacion"
         typeBtnOnClick={() => disptach(showDialogEdit())}
         typeBtn={<CreateIcon />}
+        dNone="d-none"
         children={
           <AboutMeComponent/>
         }

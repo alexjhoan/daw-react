@@ -193,13 +193,6 @@ div#recent_activities .item_activity{
 
 @media (min-width: 768px) {
 
-  .profile_user button {
-    position: absolute!important;
-    left: 115px;
-    bottom: 60px;
-    margin-top: 0px;
-    z-index: 1;
-  }
   .data_up {
     display: -ms-grid;
     display: grid;
@@ -218,6 +211,7 @@ div#recent_activities .item_activity{
       -ms-flex-align: center;
               -ms-grid-row-align: center;
     align-items: center;
+    grid-gap: 15px;
   }
   div#recent_activities .item_activity {
     margin-bottom: 0px;
@@ -237,15 +231,6 @@ div#recent_activities .item_activity{
     max-width: 100%;
     padding: 0 5%;
     overflow: hidden;
-  }
-  .buttons_profile {
-    width: 137px;
-    min-width: 137px;
-    padding: 0 15px;
-    margin-left: 70px;
-  }
-  .buttons_profile a.shared {
-    transform: translateY(-7px);
   }
   .contentTabsProfile ul {
     padding-left: 0;

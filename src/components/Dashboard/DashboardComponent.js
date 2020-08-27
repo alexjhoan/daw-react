@@ -15,9 +15,9 @@ export default function DashboardComponnet(props: any) {
         <div className="row">
           <div className="col-12 titlePublication">
             <h1 className="text-uppercase text_gray">{props.titleChildren}</h1>
-            {/*<Button className="DawBtn btnAdd" onClick={props.typeBtnOnClick}>
+            <Button className={`DawBtn btnAdd ${props.dNone}`} onClick={props.typeBtnOnClick}>
               {props.typeBtn}
-            </Button>*/}
+            </Button>
           </div>
         </div>
         {props.children}
