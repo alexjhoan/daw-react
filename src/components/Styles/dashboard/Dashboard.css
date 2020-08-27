@@ -1,0 +1,28 @@
+.dashboard_Headroom .headroom.headroom--unpinned,
+.dashboard_Headroom > div[class*="headroom"] {
+    position: relative!important;
+    transform: none!important;
+}
+
+.dashboard_Headroom .headroom.headroom--unpinned,
+.dashboard_Headroom .headroom.headroom--pinned {
+    position: fixed!important;
+}
+
+.dashboard_Headroom .headroom--pinned div#head-perfil .profile_user {
+    margin-bottom: 0;
+    transition: all 0.3s linear;
+}
+.dashboard_Headroom div#head-perfil .profile_user {
+    transition: all 0.3s ease-in-out;
+}
+.dashboard_Headroom.headroom-wrapper {
+    z-index: 10;
+    position: relative;
+}
+
+.dashboard_Headroom .headroom.headroom--unpinned div#head-perfil .profile_user {
+    padding-top: 30px;
+    padding-bottom: 0;
+    margin-bottom: -40px;
+}

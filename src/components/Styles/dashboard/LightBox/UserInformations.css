@@ -275,6 +275,34 @@ p.titleForm {
   display: none;
 }
 
+.SaveButtons .btn.BtnCancel {
+  margin-right: 50px;
+  background-color: transparent;
+  color: var(--daw-gray);
+}
+
+
+/*-------------------------User-Interests----------------------*/
+
+div#UserInterests p{
+  color: var(--daw-darkGray);
+}
+
+div#UserInterests textarea{
+  min-height: 180px;
+}
+
+/*--------------------------Media-Querys-----------------------*/
+
+@media (min-width: 768px){
+  div#UserInterests {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
 @media (min-width: 992px) {
   .contentTabsProfile {
     display: grid;
@@ -304,10 +332,4 @@ p.titleForm {
   #lightbox_profile .modal-body .container > .row > .col-12 {
     padding-left: 0;
   }
-}
-
-.SaveButtons .btn.BtnCancel {
-  margin-right: 50px;
-  background-color: transparent;
-  color: var(--daw-gray);
 }

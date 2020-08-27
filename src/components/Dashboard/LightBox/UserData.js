@@ -516,7 +516,7 @@ export default function UserData(props:any) {
           </div>
         </div>
       </div>
-      <div className="SaveButtons d-flex flex-column align-items-center justify-content-center flex-md-row-reverse justify-content-md-start">
+      <div className="SaveButtons d-flex align-items-center justify-content-center flex-md-row-reverse justify-content-md-start">
         <Button
         type="submit"
         id="postProfile"

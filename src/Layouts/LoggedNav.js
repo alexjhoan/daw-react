@@ -175,10 +175,10 @@ export default function LoggedNav(props: any) {
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <a>
+            <Link to="/dashboard/aboutme">
               <img alt="information" src={information} />
               Información
-            </a>
+            </Link>
             <a>
               <img alt="publication" src={publication} />
               Publicaciones
