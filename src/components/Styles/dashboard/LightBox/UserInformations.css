@@ -79,14 +79,14 @@
   fill: var(--daw-regularGray);
 }
 
-#formProfile label.required:after {
+#UserConfiguration div.required.form-control:after {
   content: "*";
   position: absolute;
   top: 50%;
-  right: -10px;
-  transform: translateY(-45%);
+  right: -20px;
+  transform: translateY(-30%);
   color: red;
-  font-size: 20px;
+  font-size: 30px;
 }
 
 #formProfile label textarea {
@@ -284,18 +284,18 @@ p.titleForm {
 
 /*-------------------------User-Interests----------------------*/
 
-div#UserInterests p{
+.UserInformations p{
   color: var(--daw-darkGray);
 }
 
-div#UserInterests textarea{
+#UserConfiguration textarea{
   min-height: 180px;
 }
 
 /*--------------------------Media-Querys-----------------------*/
 
 @media (min-width: 768px){
-  div#UserInterests {
+  #UserConfiguration {
     min-height: 80vh;
     display: flex;
     flex-direction: column;

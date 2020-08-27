@@ -3,7 +3,7 @@ import {Form, Button} from 'react-bootstrap'
 
 export default function UserInterests() {
   return (
-    <div id="UserInterests" className="mt-4">
+    <div id="UserConfiguration" className="mt-4">
       <div className="firstRow">
         <p className="h4">¿Quieres darte de alta en nuestra comunidad como EXPERTO o ASOCIACIÓN?</p>
         <p>Puedes dejarnos un mensaje por este medio explicándonos un poco sobre tu experiencia y los temas dominas. También puedes escribir directamente a nuestro correo electrónico <a href="mailto:soporte@dreamaway.travel" target="_blank" className="text-reset textYellow">soporte@dreamaway.travel</a>, agrega datos de contacto y documentos que consideres relevantes para evaluar tu petición.</p>
