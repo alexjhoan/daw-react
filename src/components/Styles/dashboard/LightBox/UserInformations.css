@@ -14,6 +14,7 @@
   color: var(--daw-gray);
   border-radius: 0;
   border-bottom: solid 1px var(--daw-regularGray);
+  text-align: center;
 }
 
 .colUserNav .nav-pills .linksInformations.nav-link.active {
@@ -287,6 +288,11 @@ p.titleForm {
 .UserInformations p{
   color: var(--daw-darkGray);
 }
+
+.UserInformations p.h4{
+  font-weight: 600;
+}
+
 
 #UserConfiguration textarea{
   min-height: 180px;
