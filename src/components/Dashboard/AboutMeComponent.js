@@ -28,6 +28,8 @@ import { getRegions } from '../../redux/Actions/LocationsActions'
 import {LightBox} from '../../components/Miscellaneous/LightBox'
 import UserInformations from '../../components/Dashboard/LightBox/UserInformations'
 
+import UserMessage from "./UserMessage"
+
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -84,13 +86,18 @@ export default function AboutMe() {
     },[]);
 
 
-
+  const localStg = JSON.parse(localStorage.getItem("itemsLocal") || "{}")
+  let travelerMessage
+  if (localStg.groups == "Viajero") {
+    travelerMessage = <UserMessage/>
+  }
 
   const dataPublication = DataMagazine[0]
   const dataExperts = DataExperts[0]
 
   return (
     <React.Fragment>
+      {travelerMessage}
       {!loading &&<div>
       <div className="row">
         <div className="col-12 col-sm-6 col-md-4 text-white">

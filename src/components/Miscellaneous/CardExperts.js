@@ -31,7 +31,7 @@ export function CardExpert(props:any) {
       pubImage = props.galleries
     }
     let avatarImg
-    if (props.avatar === "") {
+    if (props.avatar === undefined) {
       avatarImg = iconUser
     } else {
       avatarImg = props.avatar
@@ -49,7 +49,7 @@ export function CardExpert(props:any) {
             <h4>{props.title}</h4>
             <p className="author">
               <a href="#">
-                <img src={avatarImg} alt="..."/>
+                <img src={avatarImg} alt="..." className="mr-2" />
                 {props.authors}
               </a>
             </p>

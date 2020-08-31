@@ -1,0 +1,48 @@
+#userMessage {
+  position: fixed;
+  bottom: 12vh;
+  right: -400px;
+  width: 350px;
+  text-align: center;
+  border-radius: 40px 40px 0px 40px;
+  box-shadow: 0 5px 5px var(--daw-darkGray);
+  user-select: none;
+  z-index: 100;
+}
+
+#userMessage span.closeMessage {
+  position: absolute;
+  top: -24px;
+  right: 0;
+  color: var(--daw-yellow);
+}
+
+#userMessage span.closeMessage:hover{
+  cursor: pointer;
+}
+
+#userMessage p.header {
+  background: var(--daw-yellow);
+  padding: 5px 10px 0;
+  border-radius: 40px 40px 0 0;
+  color: #fff;
+  margin-bottom: 0;
+}
+
+#userMessage p.body {
+  padding: 0 10px 6px;
+  background: #fff;
+  border-radius: 0 0 0 40px;
+  color: var(--daw-darkGray);
+  margin-bottom: 0;
+}
+
+#userMessage.messageHide{
+  right: -400px;
+  transition: all ease-in-out .6s;
+}
+
+#userMessage.messageShow{
+  right: 10px;
+  transition: all ease-in-out .2s;
+}
