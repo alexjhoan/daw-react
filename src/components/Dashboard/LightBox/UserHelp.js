@@ -7,12 +7,12 @@ export default function UserHelp() {
       <div className="firstRow">
         <p className="h4 mt-3">¿Tienes dudas sobre alguna sección de Dreamaway?</p>
         <p>Tenemos una sección de preguntas frecuentes que quizás puedan resolver tus dudas en cuanto al funcionamiento de nuestra página y los servicios que presta.</p>
-        <a href="#" className="text-reset textYellow">Preguntas Frecuentes</a>
+        <a href="/#" className="text-reset textYellow">Preguntas Frecuentes</a>
         <p className="h4 mt-3">¿Tienes dudas sobre el manejo de tu información en Dreamaway?</p>
         <p>Puedes leer nuestras políticas de uso de datos y privacidad para resolver tus dudas.</p>
-        <a href="#" className="text-reset textYellow">Políticas de uso de datos y privacidad</a>
+        <a href="/#" className="text-reset textYellow">Políticas de uso de datos y privacidad</a>
         <p className="h4 mt-3">¿Necesitas ayuda para resolver algún error dentro de Dreamaway?</p>
-        <p>Puedes ponerte en contacto con nosotros llenando el siguiente recuadro o escribiendo directamente a nuestro correo electrónico <a href="mailto:soporte@dreamaway.travel" target="_blank" className="text-reset textYellow">soporte@dreamaway.travel</a></p>
+        <p>Puedes ponerte en contacto con nosotros llenando el siguiente recuadro o escribiendo directamente a nuestro correo electrónico <a href="mailto:soporte@dreamaway.travel" className="text-reset textYellow">soporte@dreamaway.travel</a></p>
         <Form.Group controlId="UserHelp">
           <Form.Control as="textarea" />
         </Form.Group>

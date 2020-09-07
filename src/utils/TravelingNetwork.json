@@ -1,0 +1,67 @@
+{
+  "DataTravelers":[
+    {
+      "user": "Gregorio Cabeza",
+      "groups": "Experto",
+      "picture": "https://picsum.photos/215/200?random=1",
+      "ubication": "Madrid, España",
+      "userAbout": "Comparto mi pasión por viajar con ustedes, para que disfruten de cada rincón del mundo de la misma forma..."
+    },
+    {
+      "user": "Gregorio Cabeza",
+      "groups": "Asociacion",
+      "picture": "https://picsum.photos/215/200?random=2",
+      "ubication": "Madrid, España",
+      "userAbout": "Comparto mi pasión por viajar con ustedes, para que disfruten de cada rincón del mundo de la misma forma..."
+    },
+    {
+      "user": "Gregorio Cabeza",
+      "groups": "Viajero",
+      "picture": "https://picsum.photos/215/200?random=3",
+      "ubication": "Madrid, España",
+      "userAbout": "Comparto mi pasión por viajar con ustedes, para que disfruten de cada rincón del mundo de la misma forma..."
+    },
+    {
+      "user": "Gregorio Cabeza",
+      "groups": "Experto",
+      "picture": "https://picsum.photos/215/200?random=4",
+      "ubication": "Madrid, España",
+      "userAbout": "Comparto mi pasión por viajar con ustedes, para que disfruten de cada rincón del mundo de la misma forma..."
+    },
+    {
+      "user": "Gregorio Cabeza",
+      "groups": "Asociacion",
+      "picture": "https://picsum.photos/215/200?random=5",
+      "ubication": "Madrid, España",
+      "userAbout": "Comparto mi pasión por viajar con ustedes, para que disfruten de cada rincón del mundo de la misma forma..."
+    },
+    {
+      "user": "Gregorio Cabeza",
+      "groups": "Viajero",
+      "picture": "https://picsum.photos/215/200?random=6",
+      "ubication": "Madrid, España",
+      "userAbout": "Comparto mi pasión por viajar con ustedes, para que disfruten de cada rincón del mundo de la misma forma..."
+    },
+    {
+      "user": "Gregorio Cabeza",
+      "groups": "Experto",
+      "picture": "https://picsum.photos/215/200?random=7",
+      "ubication": "Madrid, España",
+      "userAbout": "Comparto mi pasión por viajar con ustedes, para que disfruten de cada rincón del mundo de la misma forma..."
+    },
+    {
+      "user": "Gregorio Cabeza",
+      "groups": "Asociacion",
+      "picture": "https://picsum.photos/215/200?random=8",
+      "ubication": "Madrid, España",
+      "userAbout": "Comparto mi pasión por viajar con ustedes, para que disfruten de cada rincón del mundo de la misma forma..."
+    },
+    {
+      "user": "Gregorio Cabeza",
+      "groups": "Viajero",
+      "picture": "https://picsum.photos/215/200?random=9",
+      "ubication": "Madrid, España",
+      "userAbout": "Comparto mi pasión por viajar con ustedes, para que disfruten de cada rincón del mundo de la misma forma..."
+    }
+  ]
+}

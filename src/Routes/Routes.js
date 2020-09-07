@@ -6,6 +6,7 @@ import Landing from "../views/Landing"
 import DashboardInformationViews from "../views/Dashboard/DashboardInformationViews"
 import DashboardPublicacionsViews from "../views/Dashboard/DashboardPublicationViews"
 import DashboardExperiencesViews from "../views/Dashboard/DashboardExperiencesViews"
+import DashboardTravelingNetworkViews from "../views/Dashboard/DashboardTravelingNetworkViews"
 import PasswordRestore from "../views/PasswordRestore"
 import NewPasswordViews from "../views/NewPasswordViews"
 import Help from "../views/Help"
@@ -25,6 +26,7 @@ export default function Routes() {
         <ProtectedRoute exact path="/dashboard/aboutme" component={DashboardInformationViews} />
         <ProtectedRoute exact path="/dashboard/publications" component={DashboardPublicacionsViews} />
         <ProtectedRoute exact path="/dashboard/experiences" component={DashboardExperiencesViews} />
+        <ProtectedRoute exact path="/dashboard/travelingnetwork" component={DashboardTravelingNetworkViews} />
         <Redirect from="*" exact to="/" />
       </Switch>
     </Router>

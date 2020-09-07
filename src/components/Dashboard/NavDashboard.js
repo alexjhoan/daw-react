@@ -36,11 +36,11 @@ export default function NavDashboard() {
                 </svg>
               </figure>
             </a>
-            <a className="text-center nav-link d-none d-sm-flex flex-column travelingnetwork">
+            <NavLink activeClassName="active" to="/dashboard/travelingnetwork" className="text-center nav-link d-none d-sm-flex flex-column travelingnetwork">
               <figure>
                 <svg xmlns="http://www.w3.org/2000/svg" width="32.438" height="32.438" viewBox="0 0 32.438 32.438"><path className="a" d="M29.059,25.68a3.354,3.354,0,0,0-1.229.239l-4.045-4.044a9.39,9.39,0,0,0,0-11.313L27.83,6.519a3.374,3.374,0,1,0-2.15-3.14,3.353,3.353,0,0,0,.239,1.229L21.874,8.653a9.388,9.388,0,0,0-11.31,0L6.519,4.608a3.374,3.374,0,1,0-3.14,2.15,3.354,3.354,0,0,0,1.229-.239l4.045,4.045a9.388,9.388,0,0,0,0,11.311L4.608,25.921a3.327,3.327,0,0,0-1.229-.241,3.4,3.4,0,1,0,3.14,2.15l4.045-4.045a9.388,9.388,0,0,0,11.31,0l4.045,4.045a3.341,3.341,0,0,0-.239,1.227,3.379,3.379,0,1,0,3.379-3.379ZM16.219,9.461a2.7,2.7,0,1,1-2.7,2.7A2.7,2.7,0,0,1,16.219,9.461ZM11.826,21.625a1.014,1.014,0,0,1-1.014-1.014v-.676a3.72,3.72,0,0,1,3.717-3.717h3.379a3.72,3.72,0,0,1,3.717,3.717v.676a1.014,1.014,0,0,1-1.014,1.014Z" fill="#808080"></path></svg>
               </figure>
-            </a>
+            </NavLink>
             <a className="text-center nav-link d-flex flex-row" role="button">
               <span></span>
               <span></span>
@@ -61,12 +61,12 @@ export default function NavDashboard() {
                 </figure>
                 Listas
               </a>
-              <a className="text-center nav-link d-flex d-sm-none flex-row align-items-center justify-content-start travelingnetwork " href="/user_test/travelingnetwork/">
+              <NavLink activeClassName="active" to="/dashboard/travelingnetwork" className="text-center nav-link d-flex d-sm-none flex-row align-items-center justify-content-start travelingnetwork" >
                 <figure>
                   <svg xmlns="http://www.w3.org/2000/svg" width="32.438" height="32.438" viewBox="0 0 32.438 32.438"><path className="a" d="M29.059,25.68a3.354,3.354,0,0,0-1.229.239l-4.045-4.044a9.39,9.39,0,0,0,0-11.313L27.83,6.519a3.374,3.374,0,1,0-2.15-3.14,3.353,3.353,0,0,0,.239,1.229L21.874,8.653a9.388,9.388,0,0,0-11.31,0L6.519,4.608a3.374,3.374,0,1,0-3.14,2.15,3.354,3.354,0,0,0,1.229-.239l4.045,4.045a9.388,9.388,0,0,0,0,11.311L4.608,25.921a3.327,3.327,0,0,0-1.229-.241,3.4,3.4,0,1,0,3.14,2.15l4.045-4.045a9.388,9.388,0,0,0,11.31,0l4.045,4.045a3.341,3.341,0,0,0-.239,1.227,3.379,3.379,0,1,0,3.379-3.379ZM16.219,9.461a2.7,2.7,0,1,1-2.7,2.7A2.7,2.7,0,0,1,16.219,9.461ZM11.826,21.625a1.014,1.014,0,0,1-1.014-1.014v-.676a3.72,3.72,0,0,1,3.717-3.717h3.379a3.72,3.72,0,0,1,3.717,3.717v.676a1.014,1.014,0,0,1-1.014,1.014Z" fill="#808080"></path></svg>
                 </figure>
                 Red Viajera
-              </a>
+              </NavLink>
 
               <a className="nav-link d-flex flex-row align-items-center justify-content-start list " href="/user_test/favorites/">
 

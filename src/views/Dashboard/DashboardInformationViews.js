@@ -29,7 +29,7 @@ export default function DashboardInformationViews(props: any) {
         titleChildren={titleChildren}
         typeBtnOnClick={() => disptach(showDialogEdit())}
         typeBtn={<CreateIcon />}
-        hiddenButton={true}
+        hiddenBtn={true}
         children={impComponent}
       />
 

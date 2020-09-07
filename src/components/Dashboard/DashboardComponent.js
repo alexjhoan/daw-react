@@ -7,7 +7,7 @@ import BottomNav from "../../Layouts/BottomNav"
 
 export default function DashboardComponnet(props: any) {
   let buttonHidden
-  if (props.hiddenButton) {
+  if (props.hiddenBtn) {
     buttonHidden = "d-none"
   }
   return (

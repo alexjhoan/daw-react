@@ -9,7 +9,7 @@ import "../Styles/Dashboard/HeadPerfil.css"
 
 import { useDispatch, useSelector } from 'react-redux';
 import {RootState} from "../../redux/store"
-import { showDialogEdit, dismissDialogEdit } from '../../redux/Actions/DialogActions'
+import { showDialogEdit } from '../../redux/Actions/DialogActions'
 
 const localStg = JSON.parse(localStorage.getItem("itemsLocal") || "{}")
 

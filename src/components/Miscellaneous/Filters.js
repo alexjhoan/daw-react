@@ -15,7 +15,7 @@ export function TextFilter(props:any){
   })
   return(
     <div className="row">
-      <div className={`${props.className}Filter col-12 d-flex my-4`}>
+      <div className={`${props.className}Filter col-12 d-flex my-2`}>
         {textFilterImp}
       </div>
     </div>
@@ -38,7 +38,7 @@ export function TagsFilter(props:any) {
 
   return (
     <div className="row">
-      <div className="col-12 tagsFilter">
+      <div className="col-12 tagsFilter my-3">
         <button className="btnFilter">
           <img src={IconFilter} alt="..." />
         </button>

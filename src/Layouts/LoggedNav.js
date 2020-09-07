@@ -199,10 +199,10 @@ export default function LoggedNav(props: any) {
               <img alt="like" src={like} />
               Favoritos
             </a>
-            <a>
+            <Link to="/dashboard/travelingnetwork">
               <img alt="travelingnets" src={travelingnets} />
               Redes Viajeras
-            </a>
+            </Link>
             <a>
               <img alt="coupons" src={coupons} />
               Cupones

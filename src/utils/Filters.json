@@ -1,5 +1,7 @@
 {
   "DataTagsFilter":["Roma", "Brazil", "China", "Australia", "Restaurantes", "Comida", "Viajes", "España", "Italia", "Deporte"],
   "DataFirstFilter":["todos","articulos","videos","podcast"],
-  "DataSecondFilter":["todos","articulos","videos","podcast"]
+  "DataSecondFilter":["todos","articulos","videos","podcast"],
+  "NetworkFirstFilter":["seguidores", "seguidos", "explorar"],
+  "NetworkSecondFilter":["todos", "Expertos", "asociación", "viajeros"]
 }

@@ -6,7 +6,7 @@ import {useHistory} from "react-router-dom"
 
 
 export default function PasswordEmail() {
-  const history =useHistory();
+  const history = useHistory();
   useEffect(() => {
     setTimeout(
       ()=>{history.push('/')}, 6000)
